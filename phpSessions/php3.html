@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MasterCode Course</title>
+  <meta content="MasterCode Course" name="description">
+  <meta content="Html, Css, Js, jquery, bootstrap, oop, course, mastercode" name="keywords">
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.ico" rel="icon">
+  <link href="../assets/img/apple-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none" style="font-size: 37px;"><i class="bx bx-menu"></i></button>
+  <img src="../assets/img/logo.png" alt="" class="img-fluid d-md-block d-xl-none" style="width: 118px;padding: 8px 30px 0;">
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/logo.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Master Code</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/MasterC00636045" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/MasterC0de" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          
+          <a href="https://www.linkedin.com/in/master-code-8a57b81b6/?midToken=AQEVsPwSvGBmEA&midSig=2a1-hWoTMQ7pQ1&trk=eml-email_pymk_02-header-49-profile&trkEmail=eml-email_pymk_02-header-49-profile-null-dyijnh%7Ekq942ap0%7Etr-null-neptune%2Fprofile%7Evanity%2Eview" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../css.html"><i class="bx bx-home"></i> <span>All Sessions</span></a></li>
+          <li class="active"><a href="#Superglobals"><i class="bx bx-checkbox-checked"></i> <span>Superglobals</span></a></li>
+          <li><a href="#Forms"><i class="bx bx-checkbox-checked"></i> <span>PHP Forms</span></a></li>
+          <li><a href="#FileHandling"><i class="bx bx-checkbox-checked"></i> <span>PHP File Handling</span></a></li>
+          <li><a href="#Sessions"><i class="bx bx-checkbox-checked"></i> <span>PHP Sessions</span></a></li>
+          <li><a href="#Filters"><i class="bx bx-checkbox-checked"></i> <span>PHP Filters</span></a></li>
+          <li style="margin-bottom: 150px;"><a href="../text-editor.html"><i class="bx bx-caret-right-circle"></i> <span>Text Editor</span></a></li>         
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <main id="main">
+    <section id="Superglobals" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Superglobals Variables</h2>
+        <ul>
+          <li>
+            Some predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - <br>
+            and you can access them from any function, class or file without having to do anything special. <br> <br>
+            
+            The PHP superglobal variables are:
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>1-PHP $GLOBALS</h2>
+        <ul>
+          <li>
+            $GLOBALS is a PHP super global variable which is used to access global variables from anywhere in the PHP script (also
+            from within functions or methods).
+            <br> <br>
+            PHP stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable. <br> <br>
+            <b class="text-primary">example :</b>
+            <pre>
+              <code>
+  $x = 75;
+  $y = 25;
+  function addition() {
+  $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+  }
+  addition();
+  echo $z;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>2-PHP $_SERVER</h2>
+        <ul>
+          <li>
+            $_SERVER is a PHP super global variable which holds information about headers, paths, and script locations.
+            <br> <br>
+            <b class="text-primary">example :</b>
+            <pre>
+              <code>
+  echo $_SERVER['PHP_SELF'];
+  echo $_SERVER['SERVER_NAME'];
+  echo $_SERVER['HTTP_HOST'];
+  echo $_SERVER['HTTP_REFERER'];
+  echo $_SERVER['HTTP_USER_AGENT'];
+  echo $_SERVER['SCRIPT_NAME'];
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>3-PHP $_REQUEST</h2>
+        <ul>
+          <li>
+            PHP $_REQUEST is a PHP super global variable which is used to collect data after submitting an HTML form.
+            <br> <br>
+            <b class="text-primary">example :</b>
+            <xmp>
+<html>
+
+<body>
+
+  <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    Name: <input type="text" name="fname">
+    <input type="submit">
+  </form>
+
+  <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_REQUEST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
+
+</body>
+
+</html>
+            </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>4-PHP $_POST</h2>
+        <ul>
+          <li>
+            PHP $_POST is a PHP super global variable which is used to collect form data after submitting an HTML form with
+            method="post". $_POST is also widely used to pass variables.
+            <br> <br>
+            <b class="text-primary">example :</b>
+            <xmp>
+<html>
+
+<body>
+
+  <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    Name: <input type="text" name="fname">
+    <input type="submit">
+  </form>
+
+  <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
+
+</body>
+
+</html>
+            </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>5-PHP $_GET</h2>
+        <ul>
+          <li>
+            PHP $_GET is a PHP super global variable which is used to collect form data after submitting an HTML form with
+            method="get".
+            
+            $_GET can also collect data sent in the URL.
+            
+            Assume we have an HTML page that contains a hyperlink with parameters:
+            <xmp>
+  <html>
+  
+  <body>
+  
+    <a href="test_get.php?subject=PHP&web=W3schools.com">Test $GET</a>
+  
+  </body>
+  
+  </html>
+            </xmp>
+            When a user clicks on the link "Test $GET", the parameters "subject" and "web" are sent to "test_get.php", and you can
+            then access their values in "test_get.php" with $_GET.
+            <br> <br>
+            <b class="text-primary">example :</b>
+            <xmp>
+<html>
+
+<body>
+
+  <?php
+echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+?>
+
+</body>
+
+</html>
+            </xmp>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Forms" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2> PHP Forms</h2>
+        <ul>
+          <li>
+            When the user fills out the form above and clicks the submit button, the form data is sent for processing to a PHP file
+            named "welcome.php". The form data is sent with the HTTP POST method.
+          </li>
+          <li>
+            To display the submitted data you could simply echo all the variables
+            <xmp>
+  <html>
+  
+  <body>
+  
+    <form action="welcome.php" method="post">
+      Name: <input type="text" name="name"><br>
+      E-mail: <input type="text" name="email"><br>
+      <input type="submit">
+    </form>
+  
+  </body>
+  
+  </html>
+            </xmp>
+            <xmp>
+  Welcome
+  <?php echo $_POST["name"]; ?
+  Your email address is:
+  <?php echo $_POST["email"]; ?>
+  output //
+  Welcome John
+  Your email address is john.doe@example.com
+              </xmp>
+          </li>
+          <li>
+            The same result could also be achieved using the HTTP GET method
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+          <table class="table table-bordered table-active">
+            <thead>
+              <tr>
+                <th style="width:50%">GET</th>
+                <th style="width:50%">POST</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Information sent from a form with the GET method is visible to everyone (all variable names and values are displayed in
+                the URL). <br><br> GET also has limits on the amount of information to send. The limitation is about 2000 characters.  <br><br> However,
+                because the variables are displayed in the URL, it is possible to bookmark the page. This can be useful in some cases.
+                <br><br>
+                GET may be used for sending non-sensitive data.
+                <br><br>
+                <b class="text-primary">
+                Note:</b> GET should NEVER be used for sending passwords or other sensitive information!
+                </td>
+                <td>
+                  Information sent from a form with the POST method is invisible to others (all names/values are embedded within the body
+                of the HTTP request) and has no limits on the amount of information to send. <br><br>
+                
+                Moreover POST supports advanced functionality such as support for multi-part binary input while uploading files to
+                server.
+                <br><br>
+                However, because the variables are not displayed in the URL, it is not possible to bookmark the page.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="section-title">
+        <h2>
+          PHP Form Validation
+        </h2>
+      </div>
+      <div class="section-title">
+        <b class="text-primary">$_SERVER["PHP_SELF"]</b>
+        <ul>
+          <li>
+            The $_SERVER["PHP_SELF"] is a super global variable that returns the filename of the currently executing script.
+          </li>
+          <li>
+            the $_SERVER["PHP_SELF"] sends the submitted form data to the page itself, instead of jumping to a different page. This
+            way, the user will get error messages on the same page as the form.
+          </li>
+          <li>
+            $_SERVER["PHP_SELF"] exploits can be avoided by using the htmlspecialchars() function. <br>
+            <b class="text-primary">example :</b>
+            <xmp>
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>">
+//
+<form method="post" action="test_form.php/&quot;&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;"></form>
+            </xmp>
+          </li>
+        </ul>
+        <b class="text-primary">checks :</b>
+        <ul>
+          <li>
+            Strip unnecessary characters (extra space, tab, newline) from the user input data (with the PHP trim() function)
+          </li>
+          <li>
+            Remove backslashes (\) from the user input data (with the PHP stripslashes() function)
+          </li>
+          <li>
+            The next step is to create a function that will do all the checking for us
+          </li>
+          <li>
+            We will name the function test_input()
+            <pre>
+              <code>
+  // define variables and set to empty values
+  $name = $email = $gender = $comment = $website = "";
+  
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["name"]);
+  $email = test_input($_POST["email"]);
+  $website = test_input($_POST["website"]);
+  $comment = test_input($_POST["comment"]);
+  $gender = test_input($_POST["gender"]);
+  }
+  
+  function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>PHP Forms - Required Fields</h2>
+        <ul>
+          <li>
+            we have added some new variables: $nameErr, $emailErr, $genderErr, and $websiteErr. These error variables will hold
+            error messages for the required fields. </li><li> We have also added an if else statement for each $_POST variable. This checks if
+            the $_POST variable is empty (with the PHP empty() function).</li> <li> If it is empty, an error message is stored in the
+            different error variables, and if it is not empty.</li> <li>it sends the user input data through the test_input() function
+              <pre>
+                <code>
+  // define variables and set to empty values
+  $nameErr = $emailErr = $genderErr = $websiteErr = "";
+  $name = $email = $gender = $comment = $website = "";
+  
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+  $nameErr = "Name is required";
+  } else {
+  $name = test_input($_POST["name"]);
+  }
+  
+  if (empty($_POST["email"])) {
+  $emailErr = "Email is required";
+  } else {
+  $email = test_input($_POST["email"]);
+  }
+  
+  if (empty($_POST["website"])) {
+  $website = "";
+  } else {
+  $website = test_input($_POST["website"]);
+  }
+  
+  if (empty($_POST["comment"])) {
+  $comment = "";
+  } else {
+  $comment = test_input($_POST["comment"]);
+  }
+  
+  if (empty($_POST["gender"])) {
+  $genderErr = "Gender is required";
+  } else {
+  $gender = test_input($_POST["gender"]);
+  }
+  }
+                </code>
+              </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          PHP - Validate Name
+        </h2>
+        <ul>
+          <li>
+            to validate name :
+            <pre>
+              <code>
+  $name = test_input($_POST["name"]);
+  if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+  $nameErr = "Only letters and white space allowed";
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          PHP - Validate E-mail
+        </h2>
+        <ul>
+          <li>
+            to validate E-mail :
+            <pre>
+              <code>
+  $email = test_input($_POST["email"]);
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $emailErr = "Invalid email format";
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          PHP - Validate URL
+        </h2>
+        <ul>
+          <li>
+            to validate URL :
+            <pre>
+              <code>
+  $website = test_input($_POST["website"]);
+  if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+  $websiteErr = "Invalid URL";
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="FileHandling" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>
+          PHP File Handling
+        </h2>
+        <ul>
+          <li>
+            File handling is an important part of any web application. You often need to open and process a file for different
+            tasks.
+            <div class="table-responsive">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Function</th>
+                    <th style="width:40%">Description</th>
+                    <th style="width:40%">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>readfile()</td>
+                    <td>The readfile() function reads a file and writes it to the output buffer.</td>
+                    <td>
+                      <pre>
+                              <code>
+          echo readfile("webdictionary.txt");
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fopen()</td>
+                    <td>The first parameter of fopen() contains the name of the file to be opened and the second parameter specifies in which
+                    mode the file should be opened.
+                    </td>
+                    <td>
+                      <pre>
+                              <code>
+          $myfile = fopen("webdictionary.txt", "r") 
+          or 
+          die("Unable to open file!");
+          echo fread($myfile,filesize("webdictionary.txt"));
+          fclose($myfile);
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fread()</td>
+                    <td>The first parameter of fread() contains the name of the file to read from and the second parameter specifies the maximum
+                    number of bytes to read.</td>
+                    <td>
+                      <pre>
+                              <code>
+          fread($myfile,filesize("webdictionary.txt"));
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fclose()</td>
+                    <td>The fclose() requires the name of the file (or a variable that holds the filename) we want to close</td>
+                    <td>
+                      <pre>
+                              <code>
+          $myfile = fopen("webdictionary.txt", "r");
+          // some code to be executed....
+          fclose($myfile);
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fgets()</td>
+                    <td>The fgets() function is used to read a single line from a file.</td>
+                    <td>
+                      <pre>
+                              <code>
+          $myfile = fopen("webdictionary.txt", "r") 
+          or 
+          die("Unable to open file!");
+          echo fgets($myfile);
+          fclose($myfile);
+                            </code>
+                          </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>feof()</td>
+                    <td>The feof() function checks if the "end-of-file" (EOF) has been reached.
+                    <br> <br>
+                    The feof() function is useful for looping through data of unknown length.</td>
+                    <td>
+                      <pre>
+                              <code>
+            $myfile = fopen("webdictionary.txt", "r") 
+            or 
+            die("Unable to open file!");
+            // Output one line until end-of-file
+            while(!feof($myfile)) {
+            echo fgets($myfile) ;
+            }
+            fclose($myfile);
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fgetc()</td>
+                    <td>The fgetc() function is used to read a single character from a file.</td>
+                    <td>
+                      <pre>                      <code>
+          $myfile = fopen("webdictionary.txt", "r") 
+          or 
+          die("Unable to open file!");
+          // Output one character until end-of-file
+          while(!feof($myfile)) {
+          echo fgetc($myfile);
+          }
+          fclose($myfile);
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fopen()</td>
+                    <td>The fopen() function is also used to create a file. <br> <br>
+                      If you use fopen() on a file that does not exist, it will create it, given that the file is opened for writing (w) or
+                      appending (a).
+                    </td>
+                    <td>
+                      <pre>                      <code>
+          $myfile = fopen("testfile.txt", "w")
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fwrite()</td>
+                    <td>The fwrite() function is used to write to a file.
+                    <br> <br>
+                    The first parameter of fwrite() contains the name of the file to write to and the second parameter is the string to be
+                    written.</td>
+                    <td>
+                      <pre>                      <code>
+          $myfile = fopen("newfile.txt", "w") 
+          or 
+          die("Unable to open file!");
+          $txt = "John Doe\n";
+          fwrite($myfile, $txt);
+          $txt = "Jane Doe\n";
+          fwrite($myfile, $txt);
+          fclose($myfile);
+                              </code>
+                            </pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          PHP File Upload
+        </h2>
+        <ul>
+          <li>
+            Configure The "php.ini" File
+          </li>
+          <li>
+            In your "php.ini" file, search for the file_uploads directive, and set it to On
+            <pre>
+              <code>
+  file_uploads = On
+              </code>
+            </pre>
+          </li>
+        </ul>
+        <h2>
+          Create The HTML Form
+        </h2>
+        <ul>
+          <li>
+            Make sure that the form uses method="post"
+          </li>
+          <li>
+            The form also needs the following attribute: enctype="multipart/form-data". It specifies which content-type to use when
+            submitting the form
+          </li>
+          <li>
+            The form above sends data to a file called "upload.php"
+          </li>
+          <li>
+            The type="file" attribute of the "input" tag shows the input field as a file-select control, with a "Browse" button next
+            to the input control
+            <xmp>
+  <!DOCTYPE html>
+  <html>
+
+  <body>
+
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      Select image to upload:
+      <input type="file" name="fileToUpload" id="fileToUpload">
+      <input type="submit" value="Upload Image" name="submit">
+    </form>
+
+  </body>
+
+  </html>
+            </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Create The Upload File
+        </h2>
+        <ul>
+          <li>
+            The "upload.php" file contains the code for uploading a file
+          </li>
+          <li>
+            $target_dir = "uploads/" - specifies the directory where the file is going to be placed
+          </li>
+          <li>
+            $target_file specifies the path of the file to be uploaded
+          </li>
+          <li>
+            $imageFileType holds the file extension of the file (in lower case)
+          </li>
+          <li>
+            check if the image file is an actual image or a fake image
+          </li>
+          <li>
+            You will need to create a new directory called "uploads" in the directory where "upload.php" file resides. The uploaded
+            files will be saved there.
+          </li>
+          <li>
+            <pre>
+              <code>
+  $target_dir = "uploads/";
+  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+  $uploadOk = 1;
+  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+  // Check if image file is a actual image or fake image
+  if(isset($_POST["submit"])) {
+  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  if($check !== false) {
+  echo "File is an image - " . $check["mime"] . ".";
+  $uploadOk = 1;
+  } else {
+  echo "File is not an image.";
+  $uploadOk = 0;
+  }
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="section-title">
+        <h2>
+          Check if File Already Exists
+        </h2>
+        <ul>
+          <li>
+            we will check if the file already exists in the "uploads" folder. If it does, an error message is displayed
+            <pre>
+              <code>
+  // Check if file already exists
+  if (file_exists($target_file)) {
+  echo "Sorry, file already exists.";
+  $uploadOk = 0;
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Limit File Size
+        </h2>
+        <ul>
+          <li>
+            we want to check the size of the file. If the file is larger than 500KB, an error message is displayed
+            <pre>
+              <code>
+  // Check file size
+  if ($_FILES["fileToUpload"]["size"] > 500000) {
+  echo "Sorry, your file is too large.";
+  $uploadOk = 0;
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Limit File Type
+        </h2>
+        <ul>
+          <li>
+            only allows users to upload JPG, JPEG, PNG, and GIF files. All other file types gives an error message
+            <pre>
+              <code>
+  // Allow certain file formats
+  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+  && $imageFileType != "gif" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+  }
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Complete Upload File PHP Script
+        </h2>
+        <ul>
+          <li>
+            The complete "upload.php" file now looks like this
+            <xmp>
+  $target_dir = "uploads/";
+  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+  $uploadOk = 1;
+  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+  
+  // Check if image file is a actual image or fake image
+  if(isset($_POST["submit"])) {
+  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  if($check !== false) {
+  echo "File is an image - " . $check["mime"] . ".";
+  $uploadOk = 1;
+  } else {
+  echo "File is not an image.";
+  $uploadOk = 0;
+  }
+  }
+  
+  // Check if file already exists
+  if (file_exists($target_file)) {
+  echo "Sorry, file already exists.";
+  $uploadOk = 0;
+  }
+  
+  // Check file size
+  if ($_FILES["fileToUpload"]["size"] > 500000) {
+  echo "Sorry, your file is too large.";
+  $uploadOk = 0;
+  }
+  
+  // Allow certain file formats
+  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+  && $imageFileType != "gif" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+  }
+  
+  // Check if $uploadOk is set to 0 by an error
+  if ($uploadOk == 0) {
+  echo "Sorry, your file was not uploaded.";
+  // if everything is ok, try to upload file
+  } else {
+  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+  echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+  } else {
+  echo "Sorry, there was an error uploading your file.";
+  }
+  }
+            </xmp>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Sessions" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>
+          PHP Sessions
+        </h2>
+        <ul>
+          <li>
+            Session variables solve this problem by storing user information to be used across multiple pages (e.g. username,
+            favorite color, etc). By default, session variables last until the user closes the browser.
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Start a PHP Session
+        </h2>
+        <ul>
+          <li>
+            A session is started with the session_start() function.
+          </li>
+          <li>
+            Session variables are set with the PHP global variable: $_SESSION.
+          </li>
+          <li>
+            The session_start() function must be the very first thing in your document. Before any HTML tags.
+          </li>
+        </ul>
+        <Xmp>
+  <?php
+  // Start the session
+  session_start();
+  ?>
+  <!DOCTYPE html>
+  <html>
+  
+  <body>
+  
+    <?php
+  // Set session variables
+  $_SESSION["favcolor"] = "green";
+  $_SESSION["favanimal"] = "cat";
+  echo "Session variables are set.";
+  ?>
+  
+  </body>
+  
+  </html>
+        </Xmp>
+      </div>
+      <div class="section-title">
+        <h2>
+          Get PHP Session Variable Values
+        </h2>
+        <ul>
+          <li>
+            Session variables are not passed individually to each new page, instead they are retrieved from the session
+            we open at the beginning of each page (session_start()).
+          </li>
+          <li>
+            All session variable values are stored in the global $_SESSION variable
+          </li>
+        </ul>
+        <Xmp>
+  <?php
+  session_start();
+  ?>
+  <!DOCTYPE html>
+  <html>
+  
+  <body>
+  
+    <?php
+  // Echo session variables that were set on previous page
+  echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
+  echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
+  ?>
+  
+  </body>
+  
+  </html>
+        </Xmp>
+      </div>
+      <div class="section-title">
+        <h2>
+          Modify a PHP Session Variable
+        </h2>
+        <ul>
+          <li>
+            To change a session variable, just overwrite it
+          </li>
+        </ul>
+        <xmp>
+  <?php
+  session_start();
+  ?>
+  <!DOCTYPE html>
+  <html>
+  
+  <body>
+  
+    <?php
+  // to change a session variable, just overwrite it
+  $_SESSION["favcolor"] = "yellow";
+  print_r($_SESSION);
+  ?>
+  
+  </body>
+  
+  </html>
+        </xmp>
+      </div>
+      <div class="section-title">
+        <h2>
+          Destroy a PHP Session
+        </h2>
+        <ul>
+          <li>
+            To remove all global session variables and destroy the session, use session_unset() and session_destroy()
+          </li>
+        </ul>
+        <xmp>
+  <?php
+  session_start();
+  ?>
+  <!DOCTYPE html>
+  <html>
+
+  <body>
+
+    <?php
+  // remove all session variables
+  session_unset();
+
+  // destroy the session
+  session_destroy();
+  ?>
+
+  </body>
+
+  </html>
+        </xmp>
+      </div>
+    </section>
+    <hr>
+    <section id="Filters" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Filters</h2>
+        
+          
+        
+        <b class="text-primary">Why Use Filters?</b>
+        <ul>
+          <li>
+            PHP filters are used to validate and sanitize external input.
+          </li>
+          <li >
+            Many web applications receive external input. External input/data can be :
+            <ul>
+              <li>
+                User input from a form
+              </li>
+              <li>
+                Cookies
+              </li>
+              <li>
+                Web services data
+              </li>
+              <li>
+                Server variables
+              </li>
+              <li>
+                Database query results
+              </li>
+            </ul>
+          </li>
+          
+          
+          
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          PHP filter_var() Function
+        </h2>
+        <ul>
+          <li>
+            The filter_var() function both validate and sanitize data.
+          </li>
+          <li>
+            The filter_var() function filters a single variable with a specified filter. It takes two pieces of data :
+            <ul>
+              <li>
+                The variable you want to check
+              </li>
+              <li>
+                The type of check to use
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Sanitize a String
+        </h2>
+        <ul>
+          <li>
+            the filter_var() function uses to remove all HTML tags from a string
+            <xmp>
+  $str = "<h1>Hello World!</h1>";
+  $newstr = filter_var($str, FILTER_SANITIZE_STRING);
+  echo $newstr;
+              </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Validate an Integer
+        </h2>
+        <ul>
+          <li>
+            the filter_var() function to check if the variable $int is an integer
+          </li>
+          <li>
+            f $int is an integer, the output of the code below will be: "Integer is valid".
+          </li>
+          <li>
+            If $int is not an integer, the output will be: "Integer is not valid"
+            <xmp>
+  $int = 100;
+  
+  if (!filter_var($int, FILTER_VALIDATE_INT) === false) {
+  echo("Integer is valid");
+  } else {
+  echo("Integer is not valid");
+  }
+              </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Problem With zero 
+        </h2>
+        <ul>
+          <li>
+            if $int was set to 0, the function above will return "Integer is not valid". To solve this problem
+            <xmp>
+  $int = 0;
+  
+  if (filter_var($int, FILTER_VALIDATE_INT) === 0 || !filter_var($int, FILTER_VALIDATE_INT) === false) {
+  echo("Integer is valid");
+  } else {
+  echo("Integer is not valid");
+  }
+            </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Validate an IP Address
+        </h2>
+        <ul>
+          <li>
+            the filter_var() function to check if the variable $ip is a valid IP address
+            <xmp>
+  $ip = "127.0.0.1";
+  
+  if (!filter_var($ip, FILTER_VALIDATE_IP) === false) {
+  echo("$ip is a valid IP address");
+  } else {
+  echo("$ip is not a valid IP address");
+  }
+            </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Sanitize and Validate an Email Address
+        </h2>
+        <ul>
+          <li>
+            the filter_var() function uses to first remove all illegal characters from the $email variable, then check if it is a valid
+            email address
+            <xmp>
+  $email = "john.doe@example.com";
+  
+  // Remove all illegal characters from email
+  $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+  
+  // Validate e-mail
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+  echo("$email is a valid email address");
+  } else {
+  echo("$email is not a valid email address");
+  }
+            </xmp>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>
+          Sanitize and Validate a URL
+        </h2>
+        <ul>
+          <li>
+            the filter_var() function uses to first remove all illegal characters from a URL, then check if $url is a valid URL
+            <xmp>
+  $url = "https://www.facebook.com/MasterC0de";
+  
+  // Remove all illegal characters from a url
+  $url = filter_var($url, FILTER_SANITIZE_URL);
+  
+  // Validate url
+  if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
+  echo("$url is a valid URL");
+  } else {
+  echo("$url is not a valid URL");
+  }
+            </xmp>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Master Code</span></strong> 
+      </div>
+      <div class="credits">
+        <strong style="color:red;"> &hearts; </strong> Designed by <a href="https://www.facebook.com/MasterC0de">Master Code</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+  <a href="#" class="back-to-top"><i class="bx bx-chevrons-up"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

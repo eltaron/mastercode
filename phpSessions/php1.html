@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MasterCode Course</title>
+  <meta content="MasterCode Course" name="description">
+  <meta content="Html, Css, Js, jquery, bootstrap, oop, course, mastercode" name="keywords">
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.ico" rel="icon">
+  <link href="../assets/img/apple-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none" style="font-size: 37px;"><i class="bx bx-menu"></i></button>
+  <img src="../assets/img/logo.png" alt="" class="img-fluid d-md-block d-xl-none" style="width: 118px;padding: 8px 30px 0;">
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/logo.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Master Code</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/MasterC00636045" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/MasterC0de" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          
+          <a href="https://www.linkedin.com/in/master-code-8a57b81b6/?midToken=AQEVsPwSvGBmEA&midSig=2a1-hWoTMQ7pQ1&trk=eml-email_pymk_02-header-49-profile&trkEmail=eml-email_pymk_02-header-49-profile-null-dyijnh%7Ekq942ap0%7Etr-null-neptune%2Fprofile%7Evanity%2Eview" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../css.html"><i class="bx bx-home"></i> <span>All Sessions</span></a></li>
+          <li class="active"><a href="#Syntax"><i class="bx bx-checkbox-checked"></i> <span>PHP Syntax</span></a></li>
+          <li><a href="#Variables"><i class="bx bx-checkbox-checked"></i> <span>PHP Variables</span></a></li>
+          <li><a href="#Constants"><i class="bx bx-checkbox-checked"></i> <span>PHP Constants</span></a></li>
+          <li><a href="#DataTypes"><i class="bx bx-checkbox-checked"></i> <span>PHP Data Types</span></a></li>
+          <li><a href="#Numbers"><i class="bx bx-checkbox-checked"></i> <span>PHP Numbers</span></a></li>
+          <li><a href="#Math"><i class="bx bx-checkbox-checked"></i> <span>PHP Math</span></a></li>
+          <li><a href="#Operators"><i class="bx bx-checkbox-checked"></i> <span>PHP Operators</span></a></li>
+          <li style="margin-bottom: 150px;"><a href="../text-editor.html"><i class="bx bx-caret-right-circle"></i> <span>Text Editor</span></a></li>         
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <main id="main">
+    <section id="Syntax" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>Basic PHP Syntax</h2>
+        <ul>
+          <li>A PHP script can be placed anywhere in the document.</li>
+          <li>A PHP script starts with <code>&lt;?php</code> and ends with <code>?></code></li>
+          <li>The default file extension for PHP files is " <code>.php</code> ".</li>
+          <li>A PHP file normally contains HTML tags, and some PHP scripting code.</li>
+            <div class="table-responsive xmp"> 
+              <xmp>
+    <!DOCTYPE html>
+    <html>
+      <body>
+        <h1>My first PHP page</h1>
+        <?php
+        echo "Hello World!";
+        ?>
+      </body>
+    </html>
+              </xmp>
+            </div>
+            <li>In PHP, keywords (e.g. if, else, while, echo, etc.), classes, functions, and user-defined functions are not case-sensitive.</li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>Comments in PHP</h2>
+        <ul>
+          <li>A comment in PHP code is a line that is not executed as a part of the program. Its only purpose is to be read by someone who is looking at the code</li>
+          <li>
+            Comments can be used to:
+            <ul>
+              <li>Let others understand your code</li>
+              <li>Remind yourself of what you did - Most programmers have experienced coming back to their own work a year or two later and having to re-figure out what they did. Comments can remind you of what you were thinking when you wrote the code</li>
+            </ul>
+          </li>
+          <li>
+            <b class="text-primary">Examples : </b>
+            <pre>
+              <code>
+      // This is a single-line comment
+      # This is also a single-line comment
+              </code>
+            </pre>
+            <pre>
+              <code>
+      /*
+        This is a multiple-lines comment block
+        that spans over multiple
+        lines
+      */
+              </code>
+            </pre>
+            <pre>
+              <code>
+      // You can also use comments to leave out parts of a code line
+      $x = 5 /* + 15 */ + 5;
+      echo $x;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>Output</h2>
+        <ul>
+          <li>With PHP, there are two basic ways to get output: <code>echo</code> and <code>print</code>.</li>
+          <li><b class="text-primary">The differences are small:</b> <code>echo</code> has no return value while <code>print</code> has a return value of 1 so it can be used in expressions. <code>echo</code> can take multiple parameters (although such usage is rare) while <code>print</code> can take one argument. <code>echo</code> is marginally faster than <code>print</code>.</li>
+          <li>
+            The <code>echo</code> statement can be used with or without parentheses: <code>echo</code> or <code>echo()</code>.
+            <pre>
+              <code>
+    echo "&lt;h2>PHP is Fun!&lt;/h2&gt;";
+    echo "Hello world!&lt;br&gt;";
+    echo "I'm about to learn PHP!&lt;br&gt;";
+    echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+              </code>
+            </pre>
+          </li>
+          <li>
+            The <code>print</code> statement can be used with or without parentheses: <code>print</code> or <code>print()</code>.
+            <pre>
+              <code>
+    print "&lt;h2>PHP is Fun!&lt;/h2&gt;";
+    print "Hello world!&lt;br&gt;";
+    print "I'm about to learn PHP!";
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Variables" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Variables</h2>
+        <ul>
+          <li>Variables are "containers" for storing information.</li>
+          <li>
+            In PHP, a variable starts with the <code>$</code> sign, followed by the name of the variable: <br>
+            <b class="text-success">$txt = "Hello world!";</b>
+          </li>
+          <li>Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.</li>
+          <li>
+            <b class="text-primary">Rules for PHP variables:</b>
+              <ul>
+                <li>A variable starts with the <code>$</code> sign, followed by the name of the variable</li>
+                <li>A variable name must start with a letter or the underscore character</li>
+                <li>A variable name cannot start with a number</li>
+                <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+                <li>Variable names are case-sensitive (<code>$age</code> and 
+                <code>$AGE</code> are two different variables)</li>
+              </ul>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+    $txt = "simple steps";
+    echo "I love " . $txt . "!";
+    $x = 5;
+    $y = 4;
+    echo $x + $y;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>PHP Variables Scope</h2>
+        <ul>
+          <li>In PHP, variables can be declared anywhere in the script.</li>
+          <li>The scope of a variable is the part of the script where the variable can be referenced/used.</li>
+          <li>
+            PHP has three different variable scopes:
+            <ul>
+              <li>local</li>
+              <li>global</li>
+              <li>static</li>
+            </ul>
+          </li>
+          <li>
+            A variable declared <b>outside</b> a function has a <b class="text-primary">GLOBAL SCOPE</b> and can only be accessed outside a function:
+            <pre>
+              <code>
+  $x = 5; // global scope
+  function myTest() {
+    // using x inside this function will generate an error
+    echo "&lt;p>Variable x inside function is: $x&lt;/p&gt;";
+  }
+  myTest();
+  echo "&lt;p&gt;Variable x outside function is: $x&lt;/p&gt;";
+              </code>
+            </pre>
+          </li>
+          <li>
+            A variable declared <b>within</b> a function has a <b class="text-primary">LOCAL SCOPE</b> and can only be accessed within that function:
+            <pre>
+              <code>
+  function myTest() {
+    $x = 5; // local scope
+    echo "&lt;p&gt;Variable x inside function is: $x&lt;/p&gt;";
+  }
+  myTest();
+  // using x outside the function will generate an error
+  echo "&lt;p&gt;Variable x outside function is: $x&lt;/p&gt;";
+              </code>
+            </pre>
+          </li>
+          <li>
+            Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job. <br>
+            To do this, use the <code>static</code> keyword when you first declare the variable:
+            <pre>
+              <code>
+  function myTest() {
+    static $x = 0;
+    echo $x;
+    $x++;
+  }
+  myTest();
+  myTest();
+  myTest();
+              </code>
+            </pre>
+          </li>
+          <li>
+            The <code>global</code> keyword is used to access a global variable from within a function. <br>
+            To do this, use the <code>global</code> keyword before the variables (inside the function):
+            <pre>
+              <code>
+  $x = 5;
+  $y = 10;
+  function myTest() {
+    global $x, $y;
+    $y = $x + $y;
+  }
+  myTest();
+  echo $y; // outputs 15
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Constants" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Constants</h2>
+        <ul>
+          <li>Constants are like variables except that once they are defined they cannot be changed or undefined.</li>
+          <li>
+            To create a constant, use the <code>define()</code> function. <br>
+            [ <code>define(name, value, case-insensitive)</code> ]
+            <ul>
+              <li><i>name</i>: Specifies the name of the constant</li>
+              <li><i>value</i>: Specifies the value of the constant</li>
+              <li><i>case-insensitive</i>: Specifies whether the constant name should be case-insensitive. Default is false</li>
+            </ul>
+          </li>
+          <li>
+            <b class="text-primary">Example : </b>
+            <pre>
+              <code>
+  define("GREETING", "Welcome to W3Schools.com!");
+  echo GREETING;
+              </code>
+            </pre>
+          </li>
+          <li>
+            Create a constant with a case-insensitive name
+            <pre>
+              <code>
+  define("GREETING", "Welcome to W3Schools.com!", true);
+  echo greeting;
+              </code>
+            </pre>
+          </li>
+          <li>
+            PHP Constant Arrays
+            <pre>
+              <code>
+  define("cars", [
+    "Alfa Romeo",
+    "BMW",
+    "Toyota"
+  ]);
+  echo cars[0];
+              </code>
+            </pre>
+          </li>
+          <li>
+            Constants are Global
+            <pre>
+              <code>
+  define("GREETING", "Welcome to W3Schools.com!");
+  function myTest() {
+    echo GREETING;
+  }
+  myTest();
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="DataTypes" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Data Types</h2>
+        <ul>
+          <li>
+            Variables can store data of different types, and different data types can do different things. <br>
+            PHP supports the following data types:
+            <ul>
+              <li>String</li>
+              <li>Integer</li>
+              <li>Float</li>
+              <li>Boolean</li>
+              <li>Array</li>
+              <li>Object</li>
+              <li>NULL</li>
+              <li>Resource</li>
+            </ul>
+          </li>
+          <li>
+            <b class="text-primary">PHP String</b> <br>
+            A string is a sequence of characters, like "Hello world!". <br>
+            A string can be any text inside quotes. You can use single or double quotes: <br>
+            <pre>
+              <code>
+    $x = "Hello world!";
+    $y = 'Hello world!';
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">PHP Integer</b> <br>
+            An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647. <br>
+            Rules for integers: 
+            <ul>
+              <li>An integer must have at least one digit</li>
+              <li>An integer must not have a decimal point</li>
+              <li>An integer can be either positive or negative</li>
+              <li>Integers can be specified in: decimal (base 10), hexadecimal (base 16), octal (base 
+              8), or binary (base 2) notation</li>
+            </ul>
+            In the following example $x is an integer. The PHP var_dump() function returns the data type and value: <br>
+            <pre>
+              <code>
+    $x = 5985;
+    var_dump($x);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">PHP Float</b> <br>
+            A float (floating point number) is a number with a decimal point or a number in exponential form. 
+          </li>
+          <li>
+            <b class="text-primary">PHP Boolean</b> <br>
+            A Boolean represents two possible states: true or false.
+          </li>
+          <li>
+            <b class="text-primary">PHP array</b> <br>
+            An array stores multiple values in one single variable. <br>
+            <pre>
+              <code>
+    $cars = array("Volvo","BMW","Toyota");
+    var_dump($cars);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">PHP NULL Value</b> <br>
+            Null is a special data type which can have only one value: NULL. <br>
+            A variable of data type NULL is a variable that has no value assigned to it. <br>
+            If a variable is created without a value, it is automatically assigned a value of NULL. 
+            <pre>
+              <code>
+    $x = "Hello world!";
+    $x = null;
+    var_dump($x);
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Numbers" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Integers</h2>
+        <ul>
+          <li>
+            2, 256, -256, 10358, -179567 are all integers. <br>
+            An integer data type is a non-decimal number between -2147483648 and 2147483647 in 32 bit systems, and between -9223372036854775808 and 9223372036854775807 in 64 bit systems. A value greater (or lower) than this, will be stored as float, because it exceeds the limit of an integer. 
+          </li>
+          <li>
+            Here are some rules for integers:
+            <ul>
+              <li>An integer must have at least one digit</li>
+              <li>An integer must NOT have a decimal point</li>
+              <li>An integer can be either positive or negative</li>
+              <li>Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0)</li>
+            </ul>
+          </li>
+          <li>
+            PHP has the following predefined constants for integers:
+            <ul>
+              <li><code>PHP_INT_MAX </code> - The largest integer supported</li>
+              <li><code>PHP_INT_MIN </code> - The smallest integer supported</li>
+              <li><code>PHP_INT_SIZE</code> - The size of an integer in bytes</li>
+            </ul>
+          </li>
+          <li>
+            PHP has the following functions to check if the type of a variable is integer: <br>
+            <code>is_int()</code>
+          </li>
+          <li>
+            <b class="text-primary">Example : </b>
+            <pre>
+              <code>
+    $x = 5985;
+    var_dump(is_int($x));
+    $x = 59.85;
+    var_dump(is_int($x));
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>PHP Floats</h2>
+        <ul>
+          <li>
+            A float is a number with a decimal point or a number in exponential form. <br>
+            2.0, 256.4, 10.358, 7.64E+5, 5.56E-5 are all floats. <br>
+            The float data type can commonly store a value up to 1.7976931348623E+308 (platform dependent), and have a maximum precision of 14 digits. <br>
+          </li>
+          <li>
+            PHP has the following predefined constants for floats (from PHP 7.2):
+            <ul>
+              <li><code>PHP_FLOAT_MAX </code> - The largest representable floating point number</li>
+              <li><code>PHP_FLOAT_MIN </code> - The smallest representable positive floating point number</li>
+              <li><code>-PHP_FLOAT_MAX</code> - The smallest representable negative floating point number</li>
+              <li><code>PHP_FLOAT_DIG </code> - The number of decimal digits that can be rounded into a 
+              float and back without precision loss</li>
+              <li><code>PHP_FLOAT_EPSILON</code> - The smallest representable positive number x, so that 
+              x + 1.0 != 1.0</li>
+            </ul>
+          </li>
+          <li>
+            PHP has the following functions to check if the type of a variable is float: <br>
+            <code>is_float()</code>
+          </li>
+          <li>
+            <b class="text-primary">Example : </b>
+            <pre>
+              <code>
+    $x = 10.365;
+    var_dump(is_float($x));
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>PHP Infinity</h2>
+        <ul>
+          <li>A numeric value that is larger than <code>PHP_FLOAT_MAX</code> is considered infinite.</li>
+          <li>
+            PHP has the following functions to check if a numeric value is finite or infinite:
+            <ul>
+              <li><code>is_finite()</code></li>
+              <li><code>is_infinite()</code></li>
+            </ul>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+    $x = 1.9e411;
+    var_dump($x);
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>PHP NaN</h2>
+        <ul>
+          <li>NaN stands for Not a Number.</li>
+          <li>
+            PHP has the following functions to check if a value is not a number: <br>
+            <code>is_nan()</code>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  $x = acos(8);
+  var_dump($x);
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>PHP Numerical Strings</h2>
+        <ul>
+          <li>The PHP <code>is_numeric()</code> function can be used to find whether a variable is numeric. The function returns true if the variable is a number or a numeric string, false otherwise.</li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  $x = 5985;
+  var_dump(is_numeric($x));
+  $x = "5985";
+  var_dump(is_numeric($x));
+  $x = "59.85" + 100;
+  var_dump(is_numeric($x));
+  $x = "Hello";
+  var_dump(is_numeric($x));
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>PHP Casting Strings and Floats to Integers</h2>
+        <ul>
+          <li>Sometimes you need to cast a numerical value into another data type.</li>
+          <li>The (int), (integer), or intval() function are often used to convert a value to an integer.</li>
+          <li>
+            <pre>
+              <code>
+  // Cast float to int
+  $x = 23465.768;
+  $int_cast = (int)$x;
+  echo $int_cast;
+  // Cast string to int
+  $x = "23465.768";
+  $int_cast = (int)$x;
+  echo $int_cast;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Math" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Math</h2>
+        <ul>
+          <li>
+            PHP has a set of math functions that allows you to perform mathematical tasks on numbers.
+            <div class="table-responsive"> 
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Function</th>
+                    <th style="width:40%">Description</th>
+                    <th style="width:40%">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>pi()</td>
+                  <td>The pi() function returns the value of PI</td>
+                  <td>
+                    <pre>                    
+                      <code>
+  echo(pi()); // returns 3.1415926535898
+                      </code>
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td>min() and max()</td>
+                  <td>The min() and max() functions can be used to find the lowest or highest value in a list of arguments</td>
+                  <td>
+                    <pre>                      
+                      <code>
+  echo(min(0, 150, 30, 20, -8, -200));  // returns -200
+  echo(max(0, 150, 30, 20, -8, -200));  // returns 150
+                      </code>
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td>abs()</td>
+                  <td>The abs() function returns the absolute (positive) value of a number</td>
+                  <td>
+                    <pre>                      
+                      <code>
+  echo(abs(-6.7));  // returns 6.7
+                      </code>
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td>sqrt()</td>
+                  <td>The sqrt() function returns the square root of a number</td>
+                  <td>
+                    <pre>                      
+                      <code>
+  echo(sqrt(64));  // returns 8  
+                      </code>
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td>round()</td>
+                  <td>The round() function rounds a floating-point number to its nearest integer</td>
+                  <td>
+                    <pre>                    
+                      <code>
+  echo(round(0.60));  // returns 1
+  echo(round(0.49));  // returns 0
+                    </code>
+                  </pre>
+                </td>
+                </tr>
+                <tr>
+                  <td>rand()</td>
+                  <td>The rand() function generates a random number:</td>
+                  <td>
+                    <pre>                   
+                      <code>
+    echo(rand());
+                      </code>
+                    </pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td>sin() & cos() & tan()</td>
+                  <td colspan="2">
+                    Returns the sine and cosine and tan of a number <br>
+                    value in radians
+                  </td>
+                </tr>
+                <tr>
+                  <td>pow()</td>
+                  <td colspan="2">Returns x raised to the power of y</td>
+                </tr>
+                <tr>
+                  <td>rad2deg()</td>
+                  <td colspan="2">Converts a radian value to a degree value</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Operators" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>PHP Operators</h2>
+        <ul>
+          <li>
+            <h4>Arithmetic Operators</h4>
+            <div class="table-responsive"> 
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">operator</th>
+                    <th style="width:30%">Description</th>
+                    <th style="width:40%">EX</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center font-weight-bold">(+)</td>
+                    <td>Addition</td>
+                    <td><code>$x + $y</code></td>
+                  </tr>
+                  <tr>
+                    <td  class="text-center font-weight-bold">(-)</td>
+                    <td>Subtraction</td>
+                    <td><code>$x - $y</code></td>
+                  </tr>
+                  <tr>
+                    <td  class="text-center font-weight-bold">(*)</td>
+                    <td>Multiplication</td>
+                    <td><code>$x * $y</code></td>
+                  </tr>
+                  <tr>
+                    <td  class="text-center font-weight-bold">(**)</td>
+                    <td>Exponentiation</td>
+                    <td><code>$x ** $y</code></td>
+                  </tr>
+                  <tr>
+                    <td  class="text-center font-weight-bold">(/)</td>
+                    <td>Division</td>
+                    <td><code>$x / $y</code></td>
+                  </tr>
+                  <tr>
+                    <td  class="text-center font-weight-bold">(%)</td>
+                    <td>Modulus (Remainder)</td>
+                    <td><code>$x % $y</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <h4>Assignment Operators</h4>
+            <div class="table-responsive"> 
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">operator</th>
+                    <th style="width:20%">Expression</th>
+                    <th style="width:30%">Same As</th>
+                    <th style="width:30%">EX</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center font-weight-bold">(=)</td>
+                    <td>x = y</td>
+                    <td>x = y</td>
+                    <td><code>$x = 10</code></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(+=)</td>
+                    <td>x += y</td>
+                    <td>x = x + y</td>
+                    <td><code>$x += 5;</code></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(-=)</td>
+                    <td>x -= y</td>
+                    <td>x = x - y</td>
+                    <td><code>$x -= 5;</code></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(*=)</td>
+                    <td>x *= y</td>
+                    <td>x = x * y</td>
+                    <td><code>$x *= 5;</code></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(/=)</td>
+                    <td>x /= y</td>
+                    <td>x = x / y</td>
+                    <td><code>$x /= 5;</code></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(%=)</td>
+                    <td>x %= y</td>
+                    <td>x = x % y</td>
+                    <td><code>$x %= 5;</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <h4>Comparison Operators</h4>
+            <p>Comparison operators are used in logical statements to determine equality or difference between variables or values.</p>
+            <div class="table-responsive mt-3"> 
+              <table class="table table-bordered table-active">
+                <tbody>
+                  <tr>
+                    <th style="width:12%">Operator</th>
+                    <th>Description</th>
+                    <th>Comparing</th>
+                    <th>Returns</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="3" class="text-center font-weight-bold">(==)</td>
+                    <td rowspan="3">equal to</td>
+                    <td><code>$x == 8</code></td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td ><code>$x == 5</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td><code>$x == "5"</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="text-center font-weight-bold">(===)</td>
+                    <td rowspan="2">equal value and equal type</td>
+                    <td><code>$x === 5</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td><code>$x === "5"</code></td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(!=)</td>
+                    <td>not equal</td>
+                    <td><code>$x != 8</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(!=)</td>
+                    <td>not equal</td>
+                    <td><code>$x <> 8</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3" class="text-center font-weight-bold">(!==)</td>
+                    <td rowspan="3">not equal value or not equal type</td>
+                    <td><code>$x !== 5</code></td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td ><code>$x !== "5"</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td><code>$x !== 8</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(&gt;)</td>
+                    <td>greater than</td>
+                    <td><code>$x &gt; 8</code></td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(&lt;)</td>
+                    <td>less than</td>
+                    <td><code>$x &lt; 8</code></td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(&gt;=)</td>
+                    <td>greater than or equal to</td>
+                    <td><code>$x &gt;= 8</code></td>
+                    <td>false</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center font-weight-bold">(&lt;=)</td>
+                    <td>less than or equal to</td>
+                    <td><code>$x &lt;= 8</code></td>
+                    <td>true</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <h4>Increment / Decrement Operators</h4>
+            <p>
+              The PHP increment operators are used to increment a variable's value. <br>
+              The PHP decrement operators are used to decrement a variable's value.
+            </p>
+            <div class="table-responsive mt-3"> 
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:12%">Operator</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>++$x</td>
+                    <td>Pre-increment</td>
+                    <td>Increments $x by one, then returns $x</td>
+                  </tr>
+                  <tr>
+                    <td>$x++</td>
+                    <td>Post-increment</td>
+                    <td>Returns $x, then increments $x by one</td>
+                  </tr>
+                  <tr>
+                    <td>--$x</td>
+                    <td>Pre-decrement</td>
+                    <td>Decrements $x by one, then returns $x</td>
+                  </tr>
+                  <tr>
+                    <td>$x--</td>
+                    <td>Post-decrement</td>
+                    <td>Returns $x, then decrements $x by one</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <h4>Logical Operators</h4>
+            <p>Logical operators are used to determine the logic between variables or values.</p>
+            <div class="table-responsive mt-3"> 
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:12%">Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&amp;&amp;</td>
+                    <td>and</td>
+                    <td> ($x &lt; 10 &amp;&amp; $y &gt; 1) is true</td>
+                  </tr>
+                  <tr>
+                    <td>and</td>
+                    <td>and</td>
+                    <td> ($x &lt; 10 and $y &gt; 1) is true</td>
+                  </tr>
+                  <tr>
+                    <td>||</td>
+                    <td>or</td>
+                    <td>($x == 5 || $y == 5) is false</td>
+                  </tr>
+                  <tr>
+                    <td>or</td>
+                    <td>or</td>
+                    <td>($x == 5 or $y == 5) is false</td>
+                  </tr>
+                  <tr>
+                    <td>!</td>
+                    <td>not</td>
+                    <td> !(x == y) is true</td>
+                  </tr>
+                  <tr>
+                    <td>xor</td>
+                    <td>xor</td>
+                    <td>$x xor $y</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <h4>String Operators</h4>
+            <p> the . operator used to add string "concatenate" </p>
+            <b class="text-primary">EX: <br>
+              <pre>
+                <code>
+    $txt1 = "Hello";
+    $txt2 = " world!";
+    echo $txt1 . $txt2;
+                </code>
+              </pre>
+            </b>
+          </li>
+        </p>
+        </ul>
+      </div>
+    </section>
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Master Code</span></strong> 
+      </div>
+      <div class="credits">
+        <strong style="color:red;"> &hearts; </strong> Designed by <a href="https://www.facebook.com/MasterC0de">Master Code</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+  <a href="#" class="back-to-top"><i class="bx bx-chevrons-up"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MasterCode Course</title>
+  <meta content="MasterCode Course" name="description">
+  <meta content="Html, Css, Js, jquery, bootstrap, oop, course, mastercode" name="keywords">
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.ico" rel="icon">
+  <link href="../assets/img/apple-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none" style="font-size: 37px;"><i class="bx bx-menu"></i></button>
+  <img src="../assets/img/logo.png" alt="" class="img-fluid d-md-block d-xl-none" style="width: 118px;padding: 8px 30px 0;">
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/logo.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Master Code</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/MasterC00636045" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/MasterC0de" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          
+          <a href="https://www.linkedin.com/in/master-code-8a57b81b6/?midToken=AQEVsPwSvGBmEA&midSig=2a1-hWoTMQ7pQ1&trk=eml-email_pymk_02-header-49-profile&trkEmail=eml-email_pymk_02-header-49-profile-null-dyijnh%7Ekq942ap0%7Etr-null-neptune%2Fprofile%7Evanity%2Eview" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="../css.html"><i class="bx bx-home"></i> <span>All Sessions</span></a></li>
+          <li class="active"><a href="#Operators"><i class="bx bx-checkbox-checked"></i> <span>MySQL Operators</span></a></li>
+          <li><a href="#LIMIT"><i class="bx bx-checkbox-checked"></i> <span>MySQL LIMIT Clause</span></a></li>
+          <li><a href="#Functions"><i class="bx bx-checkbox-checked"></i> <span>MySQL Functions</span></a></li>
+          <li><a href="#GROUP"><i class="bx bx-checkbox-checked"></i> <span>GROUP BY && HAVING</span></a></li
+          <li><a href="#LIKE"><i class="bx bx-checkbox-checked"></i> <span>MySQL LIKE Operator</span></a></li>
+          <li><a href="#In"><i class="bx bx-checkbox-checked"></i> <span>MySQL IN && BETWEEN</span></a></li>
+          <li><a href="#Joins"><i class="bx bx-checkbox-checked"></i> <span>MySQL Joins</span></a></li>
+          <li><a href="#CASE"><i class="bx bx-checkbox-checked"></i> <span>MySQL CASE Statement</span></a></li>
+          <li style="margin-bottom: 150px;"><a href="../text-editor.html"><i class="bx bx-caret-right-circle"></i> <span>Text Editor</span></a></li>         
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <main id="main">
+    <section id="Operators" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>MySQL Operators</h2>
+        <ul>
+          <li>
+            <b class="text-primary">MySQL Arithmetic Operators</b>
+            <div class="table-responsive mt-3">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Operator</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>+</td>
+                      <td>Add</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>Subtract</td>
+                    </tr>
+                    <tr>
+                      <td>*</td>
+                      <td>Multiply</td>
+                    </tr>
+                    <tr>
+                      <td>/</td>
+                      <td>Divide</td>
+                    </tr>
+                    <tr>
+                      <td>%</td>
+                      <td>Modulo</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <b class="text-primary">MySQL Bitwise Operators</b>
+            <div class="table-responsive mt-3">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Operator</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&amp;</td>
+                    <td>Bitwise AND</td>
+                  </tr>
+                  <tr>
+                    <td>|</td>
+                    <td>Bitwise OR</td>
+                  </tr>
+                  <tr>
+                    <td>^</td>
+                    <td>Bitwise exclusive OR</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <b class="text-primary">MySQL Comparison Operators</b>
+            <div class="table-responsive mt-3">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Operator</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>=</td>
+                    <td>Equal to</td>
+                  </tr>
+                  <tr>
+                    <td>&gt;</td>
+                    <td>Greater than</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;</td>
+                    <td>Less than</td>
+                  </tr>
+                  <tr>
+                    <td>&gt;=</td>
+                    <td>Greater than or equal to</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;=</td>
+                    <td>Less than or equal to</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;&gt;</td>
+                    <td>Not equal to</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <b class="text-primary">MySQL Compound Operators</b>
+            <div class="table-responsive mt-3">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Operator</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>+=</td>
+                    <td>Add equals</td>
+                  </tr>
+                  <tr>
+                    <td>-=</td>
+                    <td>Subtract equals</td>
+                  </tr>
+                  <tr>
+                    <td>*=</td>
+                    <td>Multiply equals</td>
+                  </tr>
+                  <tr>
+                    <td>/=</td>
+                    <td>Divide equals</td>
+                  </tr>
+                  <tr>
+                    <td>%=</td>
+                    <td>Modulo equals</td>
+                  </tr>
+                  <tr>
+                    <td>&amp;=</td>
+                    <td>Bitwise AND equals</td>
+                  </tr>
+                  <tr>
+                    <td>^-=</td>
+                    <td>Bitwise exclusive equals</td>
+                  </tr>
+                  <tr>
+                    <td>|*=</td>
+                    <td>Bitwise OR equals</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <b class="text-primary">MySQL Logical Operators</b>
+            <div class="table-responsive mt-3">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Operator</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ALL</td>
+                    <td>TRUE if all of the subquery values meet the condition</td>
+                  </tr>
+                  <tr>
+                    <td>AND</td>
+                    <td>TRUE if all the conditions separated by AND is TRUE</td>
+                  </tr>
+                  <tr>
+                    <td>ANY</td>
+                    <td>TRUE if any of the subquery values meet the condition</td>
+                  </tr>
+                  <tr>
+                    <td>BETWEEN</td>
+                    <td>TRUE if the operand is within the range of comparisons</td>
+                  </tr>
+                  <tr>
+                    <td>EXISTS</td>
+                    <td>TRUE if the subquery returns one or more records</td>
+                  </tr>
+                  <tr>
+                    <td>IN</td>
+                    <td>TRUE if the operand is equal to one of a list of expressions</td>
+                  </tr>
+                  <tr>
+                    <td>LIKE</td>
+                    <td>TRUE if the operand matches a pattern</td>
+                  </tr>
+                  <tr>
+                    <td>NOT</td>
+                    <td>Displays a record if the condition(s) is NOT TRUE</td>
+                  </tr>
+                  <tr>
+                    <td>OR</td>
+                    <td>TRUE if any of the conditions separated by OR is TRUE</td>
+                  </tr>
+                  <tr>
+                    <td>SOME</td>
+                    <td>TRUE if any of the subquery values meet the condition</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="LIMIT" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>MySQL LIMIT Clause</h2>
+        <ul>
+          <li>The <code>LIMIT</code> clause is used to specify the number of records to return.</li>
+          <li>The <code>LIMIT</code> clause is useful on large tables with thousands of records. Returning a large number of records can impact performance.</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table_name
+  WHERE condition
+  LIMIT number;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  SELECT * FROM Customers
+  WHERE Country='Germany'
+  LIMIT 3;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Functions" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>MySQL Functions</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered table-active">
+            <thead>
+              <tr>
+                <th style="width:30%">Function</th>
+                <th style="width:35%">Syntax</th>
+                <th style="width:35%">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>MIN()</b> <br> The <code>MIN()</code> function returns the smallest value of the selected column.</td>
+                <td>
+                  <pre>
+                    <code>
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+                    </code>
+                  </pre>
+                </td>
+                <td>
+                  <pre>
+                    <code>
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+              <tr>
+                <td><b>MAX()</b> <br> The <code>MAX()</code> function returns the largest value of the selected column.</td>
+                <td>
+                  <pre>
+                    <code>
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+                    </code>
+                  </pre>
+                </td>
+                <td>
+                  <pre>
+                    <code>
+SELECT MAX(Price) AS MAXPrice
+FROM Products;
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+              <tr>
+                <td><b>COUNT()</b> <br> The <code>COUNT()</code> function returns the number of rows that matches a specified criterion.</td>
+                <td>
+                  <pre>
+                    <code>
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+                    </code>
+                  </pre>
+                </td>
+                <td>
+                  <pre>
+                    <code>
+SELECT COUNT(ProductID)
+FROM Products;
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+              <tr>
+                <td><b>AVG()</b> <br> The <code>AVG()</code> function returns the average value of a numeric column. </td>
+                <td>
+                  <pre>
+                    <code>
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+                    </code>
+                  </pre>
+                </td>
+                <td>
+                  <pre>
+                    <code>
+SELECT AVG(Price)
+FROM Products;
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+              <tr>
+                <td><b>SUM()</b> <br> The <code>SUM()</code> function returns the total sum of a numeric column. </td>
+                <td>
+                  <pre>
+                    <code>
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+                    </code>
+                  </pre>
+                </td>
+                <td>
+                  <pre>
+                    <code>
+SELECT SUM(Quantity)
+FROM OrderDetails;
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section id="GROUP" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>GROUP BY Statement</h2>
+        <ul>
+          <li>The <code>GROUP BY</code> statement groups rows that have the same values into summary rows, like "find the number of customers in each country".</li>
+          <li>The <code>GROUP BY</code> statement is often used with aggregate functions (<code>COUNT()</code>, <code>MAX()</code>, <code>MIN()</code>, <code>SUM()</code>, <code>AVG()</code> ) to group the result-set by one or more columns.</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table_name
+  WHERE condition
+  GROUP BY column_name(s)
+  ORDER BY column_name(s);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b> <br>
+            The following SQL statement lists the number of customers in each country, sorted high to low:
+            <pre>
+              <code>
+  SELECT COUNT(CustomerID), Country
+  FROM Customers
+  GROUP BY Country
+  ORDER BY COUNT(CustomerID) DESC;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example2:</b> <br>
+            The following SQL statement lists the number of orders sent by each shipper:
+            <pre>
+              <code>
+  SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+  LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+  GROUP BY ShipperName;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>HAVING Clause</h2>
+        <ul>
+          <li>The <code>HAVING</code> clause was added to SQL because the <code>WHERE</code> keyword cannot be used with aggregate functions.</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table_name
+  WHERE condition
+  GROUP BY column_name(s)
+  HAVING condition
+  ORDER BY column_name(s);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b> <br>
+            The following SQL statement lists the number of customers in each country. Only include countries with more than 5 customers:
+            <pre>
+              <code>
+  SELECT COUNT(CustomerID), Country
+  FROM Customers
+  GROUP BY Country
+  HAVING COUNT(CustomerID) > 5;
+              </code>
+            </pre>
+          </li>
+          <li>
+            The following SQL statement lists if the employees "Davolio" or "Fuller" have registered more than 25 orders:
+            <pre>
+              <code>
+  SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+  FROM Orders
+  INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+  WHERE LastName = 'Davolio' OR LastName = 'Fuller'
+  GROUP BY LastName
+  HAVING COUNT(Orders.OrderID) > 25;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="LIKE" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>MySQL LIKE Operator</h2>
+        <ul>
+          <li>The <code>LIKE</code> operator is used in a <code>WHERE</code> clause to search for a specified pattern in a column.</li>
+          <li>
+            There are two wildcards often used in conjunction with the <code>LIKE</code> operator:
+            <ul>
+              <li>The percent sign (%) represents zero, one, or multiple characters</li>
+              <li>The underscore sign (_) represents one, single character</li>
+            </ul>
+          </li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column1, column2, ...
+  FROM table_name
+  WHERE columnN LIKE pattern;
+              </code>
+            </pre>
+          </li>
+          <li>
+            Here are some examples showing different LIKE operators with '%' and '_' wildcards:
+            <div class="table-responsive">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:45%">LIKE Operator</th>
+                    <th style="width:55%">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>WHERE CustomerName LIKE 'a%'</td>
+                    <td>Finds any values that start with "a"</td>
+                  </tr>
+                  <tr>
+                    <td>WHERE CustomerName LIKE '%a'</td>
+                    <td>Finds any values that end with "a"</td>
+                  </tr>
+                  <tr>
+                    <td>WHERE CustomerName LIKE '%or%'</td>
+                    <td>Finds any values that have "or" in any position</td>
+                  </tr>
+                  <tr>
+                    <td>WHERE CustomerName LIKE '_r%'</td>
+                    <td>Finds any values that have "r" in the second position</td>
+                  </tr>
+                  <tr>
+                    <td>WHERE CustomerName LIKE 'a_%'</td>
+                    <td>Finds any values that start with "a" and are at least 2 characters in length</td>
+                  </tr>
+                  <tr>
+                    <td>WHERE CustomerName LIKE 'a__%'</td>
+                    <td>Finds any values that start with "a" and are at least 3 characters in length</td>
+                  </tr>
+                  <tr>
+                    <td>WHERE ContactName LIKE 'a%o'</td>
+                    <td>Finds any values that start with "a" and ends with "o"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b> <br>
+            The following SQL statement selects all customers with a ContactName that starts with "a" and ends with "o"
+            <pre>
+              <code>
+  SELECT * FROM Customers
+  WHERE ContactName LIKE 'a%o';
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="In" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>The MySQL IN Operator</h2>
+        <ul>
+          <li>The <code>IN</code> operator allows you to specify multiple values in a <code>WHERE</code> clause.</li>
+          <li>The <code>IN</code> operator is a shorthand for multiple <code>OR</code> conditions.</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table_name
+  WHERE column_name IN (value1, value2, ...);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">OR:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table_name
+  WHERE column_name IN (SELECT STATEMENT);
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  SELECT * FROM Customers
+  WHERE Country IN ('Germany', 'France', 'UK');
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">The following SQL statement selects all customers that are NOT located in "Germany", "France" or "UK":</b>
+            <pre>
+              <code>
+  SELECT * FROM Customers
+  WHERE Country NOT IN ('Germany', 'France', 'UK');
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">The following SQL statement selects all customers that are from the same countries as the suppliers:</b>
+            <pre>
+              <code>
+  SELECT * FROM Customers
+  WHERE Country IN (SELECT Country FROM Suppliers);
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>MySQL BETWEEN Operator</h2>
+        <ul>
+          <li>The <code>BETWEEN</code> operator selects values within a given range. The values can be numbers, text, or dates.</li>
+          <li>The <code>BETWEEN</code> operator is inclusive: begin and end values are included.</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table_name
+  WHERE column_name BETWEEN value1 AND value2;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b> <br>
+            The following SQL statement selects all products with a ProductName between "Carnarvon Tigers" and "Mozzarella di Giovanni":
+            <pre>
+              <code>
+  SELECT * FROM Products
+  WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+  ORDER BY ProductName;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">BETWEEN with IN Example</b> <br>
+            The following SQL statement selects all products with a price between 10 and 20. In addition; do not show products with a CategoryID of 1,2, or 3:
+            <pre>
+              <code>
+  SELECT * FROM Products
+  WHERE Price BETWEEN 10 AND 20
+  AND CategoryID NOT IN (1,2,3);
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr>
+    <section id="Joins" class="p-4 p-md-5">
+      <div class="section-title">
+        <h2>MySQL Joining Tables</h2>
+        <ul>
+          <li>A <code>JOIN</code> clause is used to combine rows from two or more tables, based on a related column between them.</li>
+          <li>
+            <b class="text-primary">Let's look at a selection from the "Orders" table:</b>
+            <div class="table-responsive">
+              <table class="table table-bordered table-active">
+                <tbody>
+                  <tr>
+                    <th style="width:15%">OrderID</th>
+                    <th>CustomerID</th>
+                    <th>OrderDate</th>
+                  </tr>
+                  <tr>
+                    <td>10308</td>
+                    <td>2</td>
+                    <td>1996-09-18</td>
+                  </tr>
+                  <tr>
+                    <td>10309</td>
+                    <td>37</td>
+                    <td>1996-09-19</td>
+                  </tr>
+                  <tr>
+                    <td>10310</td>
+                    <td>77</td>
+                    <td>1996-09-20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            Then, look at a selection from the "Customers" table:
+            <div class="table-responsive">
+              <table class="table table-bordered table-active">
+                <tbody>
+                  <tr>
+                    <th style="width:15%">CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Country</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Ana Trujillo</td>
+                    <td>Mexico</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Antonio Moreno</td>
+                    <td>Mexico</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            Notice that the "CustomerID" column in the "Orders" table refers to the "CustomerID" in the "Customers" table. The relationship between the two tables above is the "CustomerID" column. <br>
+            Then, we can create the following SQL statement (that contains an <code>INNER JOIN</code> ), that selects records that have matching values in both tables:
+            <pre>
+              <code>
+  SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+  FROM Orders
+  INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+              </code>
+            </pre>
+            and it will produce something like this:
+            <div class="table-responsive">
+              <table class="table table-bordered table-active">
+                <tbody>
+                  <tr>
+                    <th style="width:15%">OrderID</th>
+                    <th style="width:70%">CustomerName</th>
+                    <th style="width:15%">OrderDate</th>
+                  </tr>
+                  <tr>
+                    <td>10308</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>9/18/1996</td>
+                  </tr>
+                  <tr>
+                    <td>10365</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>11/27/1996</td>
+                  </tr>
+                  <tr>
+                    <td>10383</td>
+                    <td>Around the Horn</td>
+                    <td>12/16/1996</td>
+                  </tr>
+                  <tr>
+                    <td>10355</td>
+                    <td>Around the Horn</td>
+                    <td>11/15/1996</td>
+                  </tr>
+                  <tr>
+                    <td>10278</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>8/12/1996</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <b class="text-primary">Types of Joins in MySQL</b>
+            <ul>
+              <li><code>INNER JOIN</code>: Returns records that have matching values in both tables</li>
+              <li><code>LEFT JOIN</code>: Returns all records from the left table, and the matched records from the right table</li>
+              <li><code>RIGHT JOIN</code>: Returns all records from the right table, and the matched records from the left table</li>
+              <li><code>FULL OUTER JOIN</code>: Returns all records from both tables</li>
+            </ul>
+            <img src="sql-join.png" alt="" width="100%">
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>INNER JOIN Keyword</h2>
+        <ul>
+          <li>The <code>INNER JOIN</code> keyword selects records that have matching values in both tables.</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table1
+  INNER JOIN table2
+  ON table1.column_name = table2.column_name;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  SELECT Orders.OrderID, Customers.CustomerName
+  FROM Orders
+  INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;  
+              </code>
+            </pre>
+          </li>
+          <li>The <code>INNER JOIN</code> keyword selects all rows from both tables as long as there is a match between the columns. If there are records in the "Orders" table that do not have matches in "Customers", these orders will not be shown!</li>
+          <li>
+            <b class="text-primary">Example:</b> <br>
+            The following SQL statement selects all orders with customer and shipper information:
+            <pre>
+              <code>
+  SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+  FROM ((Orders
+  INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+  INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID); 
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>LEFT JOIN Keyword</h2>
+        <ul>
+          <li>The <code>LEFT JOIN</code> keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table1
+  LEFT JOIN table2
+  ON table1.column_name = table2.column_name;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  SELECT Customers.CustomerName, Orders.OrderID
+  FROM Customers
+  LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+  ORDER BY Customers.CustomerName;
+              </code>
+            </pre>
+          </li>
+          <li>The <code>LEFT JOIN</code> keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).</li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>RIGHT JOIN Keyword</h2>
+        <ul>
+          <li>The <code>RIGHT JOIN</code> keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  ELECT column_name(s)
+  FROM table1
+  RIGHT JOIN table2
+  ON table1.column_name = table2.column_name;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+  FROM Orders
+  RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+  ORDER BY Orders.OrderID;
+              </code>
+            </pre>
+          </li>
+          <li>The <code>RIGHT JOIN</code> keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).</li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>MySQL CROSS JOIN Keyword</h2>
+        <ul>
+          <li>The <code>CROSS JOIN</code> keyword returns all records from both tables (table1 and table2).</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table1
+  CROSS JOIN table2;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  SELECT Customers.CustomerName, Orders.OrderID
+  FROM Customers
+  CROSS JOIN Orders;
+              </code>
+            </pre>
+          </li>
+          <li>The <code>CROSS JOIN</code> keyword returns all matching records from both tables whether the other table matches or not. So, if there are rows in "Customers" that do not have matches in "Orders", or if there are rows in "Orders" that do not have matches in "Customers", those rows will be listed as well.</li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>MySQL Self Join</h2>
+        <ul>
+          <li>A self join is a regular join, but the table is joined with itself.</li>
+          <li>
+            <b class="text-primary">Syntax:</b>
+            <pre>
+              <code>
+  SELECT column_name(s)
+  FROM table1 T1, table1 T2
+  WHERE condition;
+              </code>
+            </pre>
+          </li>
+          <li>
+            <b class="text-primary">Example:</b>
+            <pre>
+              <code>
+  SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+  FROM Customers A, Customers B
+  WHERE A.CustomerID <> B.CustomerID
+  AND A.City = B.City
+  ORDER BY A.City;
+              </code>
+            </pre>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+
+      </div>
+    </section>
+    <hr>
+    <section id="CASE" class="p-4 p-md-5">
+      <h2>MySQL CASE Statement</h2>
+      <ul>
+        <li>The <code>CASE</code> statement goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the <code>ELSE</code> clause.</li>
+        <li>If there is no <code>ELSE</code> part and no conditions are true, it returns NULL.</li>
+        <li>
+          <b class="text-primary">Syntax:</b>
+          <pre>
+            <code>
+  CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+  END;
+            </code>
+          </pre>
+        </li>
+        <li>
+          <b class="text-primary">Example:</b> <br>
+          The following SQL goes through conditions and returns a value when the first condition is met:
+          <pre>
+            <code>
+  SELECT OrderID, Quantity,
+  CASE
+      WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+      WHEN Quantity = 30 THEN 'The quantity is 30'
+      ELSE 'The quantity is under 30'
+  END AS QuantityText
+  FROM OrderDetails;
+            </code>
+          </pre>
+        </li>
+        <li>
+          <b class="text-primary">Example2:</b> <br>
+          The following SQL will order the customers by City. However, if City is NULL, then order by Country:
+          <pre>
+            <code>
+  SELECT CustomerName, City, Country
+  FROM Customers
+  ORDER BY
+  (CASE
+      WHEN City IS NULL THEN Country
+      ELSE City
+  END);
+            </code>
+          </pre>
+        </li>
+      </ul>
+    </section>
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Master Code</span></strong> 
+      </div>
+      <div class="credits">
+        <strong style="color:red;"> &hearts; </strong> Designed by <a href="https://www.facebook.com/MasterC0de">Master Code</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+  <a href="#" class="back-to-top"><i class="bx bx-chevrons-up"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="../assets/vendor/counterup/counterup.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/venobox/venobox.min.js"></script>
+  <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
