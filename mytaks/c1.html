@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #dce7eb;
+        font-family: "Titillium Web", sans-serif;
+      }
+      main {
+        width: 50%;
+        border-top: 10px solid #006a71;
+        background-color: #fefffa;
+        margin: 2% auto;
+        text-align: center;
+        padding: 30px;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-size: 36px;
+        letter-spacing: 3px;
+        font-weight: bold;
+        color: #006a71;
+      }
+      p {
+        color: rgba(48, 69, 92, 0.8);
+        font-size: 17px;
+        letter-spacing: 1px;
+      }
+      input:not([type="radio"]),
+      select,
+      textarea {
+        width: 55%;
+        height: 65px;
+        border: none;
+        background-color: #dce7eb;
+        color: #006a71;
+        font-weight: bold;
+        text-align: center;
+      }
+      textarea {
+        height: auto;
+        padding-top: 15px;
+      }
+      div {
+        margin: 20px 0;
+      }
+      label {
+        color: rgba(48, 69, 92, 0.8);
+        margin-right: 15px;
+        font-weight: bold;
+      }
+      .btn {
+        background-color: #006a71;
+        padding: 24px 55px;
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="text-center">
+      <h1>Sign Up</h1>
+      <p>Create New Account</p>
+      <img src="images/sign-up.png" alt="sign-up" />
+      <form action="">
+        <div>
+          <input type="text" placeholder="Enter Username" />
+        </div>
+        <div>
+          <input type="email" placeholder="Enter Email" />
+        </div>
+        <div>
+          <input type="passsword" placeholder="Enter Password" />
+        </div>
+        <div>
+          <select name="" id="">
+            <option value="" selected disabled>Select City</option>
+            <option value="">Cairo</option>
+            <option value="">Alex</option>
+            <option value="">KFS</option>
+          </select>
+        </div>
+        <div>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="8"
+            placeholder="About"
+          ></textarea>
+        </div>
+        <div>
+          <input type="radio" name="type" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="type" id="female" />
+          <label for="female">Female</label>
+        </div>
+        <div>
+          <button class="btn" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
