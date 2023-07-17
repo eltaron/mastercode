@@ -138,6 +138,9 @@
   ul li:nth-of-type(10) {
     animation-delay: 2.75s;
   }
+  ul li:nth-of-type(11) {
+    animation-delay: 3s;
+  }
   ul li:last-of-type {
     padding-bottom: 0;
   }
