@@ -45,9 +45,9 @@
           <li><a href="#Shadows"><i class="bx bx-checkbox-checked"></i> <span>Css Shadows</span></a></li>
           <li><a href="#Display"><i class="bx bx-checkbox-checked"></i> <span>Css Display</span></a></li>
           <li><a href="#Position"><i class="bx bx-checkbox-checked"></i> <span>Css Position</span></a></li>
-          <li><a href="#Float"><i class="bx bx-checkbox-checked"></i> <span>Overflow && Float</span></a></li>
+          <li><a href="#Float"><i class="bx bx-checkbox-checked"></i> <span>Float & Overflow</span></a></li>
+          <li><a href="#Queries"><i class="bx bx-checkbox-checked"></i> <span>Flexbox & Media Queries</span></a></li>
           <li><a href="#Combinators"><i class="bx bx-checkbox-checked"></i> <span>Combinators & Pseudo</span></a></li>
-          <li><a href="#Queries"><i class="bx bx-checkbox-checked"></i> <span>Media Queries & Flexbox</span></a></li>
           <li><a href="#Links"><i class="bx bx-checkbox-checked"></i> <span>Styling Links</span></a></li>
           <li  style="margin-bottom: 150px;"><a href="../text-editor.html"><i class="bx bx-caret-right-circle"></i> <span>Text Editor</span></a></li>         
         </ul>
@@ -604,6 +604,120 @@
     </section>
     <hr>
     <section id="Float" class="p-4 p-md-5">
+      
+      <div class="section-title">
+        <h2>CSS float and clear</h2>
+        <ul>
+          <li>The CSS float property specifies how an element should float.</li>
+          <li>The CSS clear property specifies what elements can float beside the cleared element and on which side.</li>
+          <li>
+            The float property can have one of the following values: 
+            <ul>
+              <li> <code>left</code> - The element floats to the left of its container</li>
+              <li> <code>right</code> - The element floats to the right of its container</li>
+              <li> <code>none</code> - The element does not float (will be displayed just where it occurs in the text). This is default</li>
+              <li> <code>inherit</code> - The element inherits the float value of its parent</li>
+            </ul>
+          </li>
+          <li>
+            <b class="text-primary">EX:</b>
+            <div class="table-responsive xmp">
+              <xmp>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        float: left;
+        padding: 15px; 
+      }
+      .div1 {
+        background: red;
+      }
+      .div2 {
+        background: yellow;
+      }
+      .div3 {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+  </body>
+</html>
+              </xmp>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-title">
+        <h2>Clear Property</h2>
+        <ul>
+          <li>When we use the float property, and we want the next element below (not on right or left), we will have to use the clear property.</li>
+          <li>The clear property specifies what should happen with the element that is next to a floating element.</li>
+          <li>
+            The clear property can have one of the following values : 
+            <ul>
+              <li> <code>none</code> - The element is not pushed below 
+              left or right floated elements. This is default</li>
+              <li> <code>left</code> - The element is pushed below left 
+              floated elements</li>
+              <li> <code>right</code> - The element is pushed below 
+              right floated elements</li>
+              <li> <code>both</code> - The element is pushed below both 
+              left and right floated elements</li>
+              <li> <code>inherit</code> - The element inherits the clear value 
+              from its parent</li>
+            </ul>
+          </li>
+          <li>When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left.</li>
+          <li>
+            <b class="text-primary">EX:</b>
+            <div class="table-responsive xmp">
+              <xmp>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .div1 {
+        float: left;
+        padding: 10px;
+        border: 3px solid #73AD21;
+      }
+      .div2 {
+        padding: 10px;
+        border: 3px solid red;
+      }
+      .div3 {
+        float: left;
+        padding: 10px;  
+        border: 3px solid #73AD21;
+      }
+      .div4 {
+        padding: 10px;
+        border: 3px solid red;
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Without clear</h2>
+    <div class="div1">div1</div>
+    <div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+    <br><br>
+    <h2>With clear</h2>
+    <div class="div3">div3</div>
+    <div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+  </body>
+</html>                
+              </xmp>
+            </div>
+          </li>
+        </ul>
+      </div>
       <div class="section-title">
         <h2>CSS Overflow</h2>
         <ul>
@@ -715,116 +829,445 @@ div {
           </li>
         </ul>
       </div>
+    </section>
+    
+    <hr>
+    <section id="Queries" class="p-4 p-md-5">
+      
       <div class="section-title">
-        <h2>CSS float and clear</h2>
+        <h2>CSS Flexbox</h2>
         <ul>
-          <li>The CSS float property specifies how an element should float.</li>
-          <li>The CSS clear property specifies what elements can float beside the cleared element and on which side.</li>
           <li>
-            The float property can have one of the following values: 
+            <h4>Before the Flexbox Layout module, there were four layout modes:</h4>
             <ul>
-              <li> <code>left</code> - The element floats to the left of its container</li>
-              <li> <code>right</code> - The element floats to the right of its container</li>
-              <li> <code>none</code> - The element does not float (will be displayed just where it occurs in the text). This is default</li>
-              <li> <code>inherit</code> - The element inherits the float value of its parent</li>
+              <li>Block, for sections in a webpage</li>
+              <li>Inline, for text</li>
+              <li>Table, for two-dimensional table data</li>
+              <li>Positioned, for explicit position of an element</li>
             </ul>
+            The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
           </li>
           <li>
-            <b class="text-primary">EX:</b>
-            <div class="table-responsive xmp">
+            <b class="text-primary">EX :</b>
+            <div class="table-responsive xmp"> 
               <xmp>
 <!DOCTYPE html>
 <html>
   <head>
     <style>
-      div {
-        float: left;
-        padding: 15px; 
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: DodgerBlue;
       }
-      .div1 {
-        background: red;
-      }
-      .div2 {
-        background: yellow;
-      }
-      .div3 {
-        background: green;
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
       }
     </style>
   </head>
   <body>
-    <div class="div1">Div 1</div>
-    <div class="div2">Div 2</div>
-    <div class="div3">Div 3</div>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>    
+    </div>
+    <p>Try resizing the browser window.</p>
+  </body>
+</html>                
+              </xmp>
+            </div>
+          </li>
+          <li class="mt-5">
+            <h4>CSS Flex Container</h4>
+            The flex container becomes flexible by setting the display property to flex <br>
+            <b class="text-primary">EX :</b>
+            <pre>
+              <code>
+  .flex-container {
+    display: flex;
+  }
+              </code>
+            </pre>
+            The flex container properties are: 
+            <ul class="row">
+              <li class="col-md-4"><code>flex-direction</code></li>
+              <li class="col-md-4"><code>flex-wrap</code></li>
+              <li class="col-md-4"><code>flex-flow</code></li>
+              <li class="col-md-4"><code>justify-content</code></li>
+              <li class="col-md-4"><code>align-items</code></li>
+              <li class="col-md-4"><code>align-content</code></li>
+            </ul>
+            <div class="table-responsive"> 
+              <table class="table table-bordered table-active">
+                <thead>
+                  <th style="width: 20%;">Property</th>
+                  <th style="width: 55%;">Description</th>
+                  <th style="width: 25%;">Example</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>flex-direction</td>
+                    <td>
+                      The <code>flex-direction</code> property defines in which direction the container wants to stack the flex items.
+                      <ul>
+                        <li>The <code>column</code> value stacks the flex items vertically (from top to bottom).</li>
+                        <li>The <code>column-reverse</code> value stacks the flex items vertically (but from bottom to top).</li>
+                        <li>The <code>row</code> value stacks the flex items horizontally (from left to right).</li>
+                        <li>The <code>row-reverse</code> value stacks the flex items horizontally (but from right to left).</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>flex-wrap</td>
+                    <td>
+                      The <code>flex-wrap</code> property specifies whether the flex items should wrap or not.
+                      <ul>
+                        <li>The <code>wrap</code> value specifies that the flex items will wrap if necessary.</li>
+                        <li>The <code>nowrap</code> value specifies that the flex items will not wrap (this is default).</li>
+                        <li>The <code>wrap-reverse</code> value specifies that the flexible items will wrap if necessary, in reverse order.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>flex-flow</td>
+                    <td>The <code>flex-flow</code> property is a shorthand property for setting both the <code>flex-direction</code> and <code>flex-wrap</code> properties.</td>                    
+                    <td>
+                      <pre>
+                        <code>
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>justify-content </td>
+                    <td>
+                      The <code>justify-content</code> property is used to align the flex items.
+                      <ul>
+                        <li>The <code>flex-start</code> value aligns the flex items at the beginning of the container (this is default).</li>
+                        <li>The <code>flex-end</code> value aligns the flex items at the end of the container.</li>
+                        <li>The <code>space-around </code> value displays the flex items with space before, between, and after the lines.</li>
+                        <li>The <code>space-between</code> value displays the flex items with space between the lines.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>align-items</td>
+                    <td>
+                      The align-items property is used to align the flex items.
+                      <ul>
+                        <li>The <code>center</code> value aligns the flex items in the middle of the container.</li>
+                        <li>The <code>flex-start</code> value aligns the flex items at the top of the container.</li>
+                        <li>The <code>flex-end</code> value aligns the flex items at the bottom of the container.</li>
+                        <li>The <code>stretch</code> value stretches the flex items to fill the container (this is default).</li>
+                        <li>The <code>baseline</code> value aligns the flex items such as their baselines aligns.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  .flex-container {
+    display: flex;
+    height: 200px;
+    align-items: center;
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>align-content</td>
+                    <td>
+                      The <code>align-content</code> property is used to align the flex lines.
+                      <ul>
+                        <li>The <code>space-between</code> value displays the flex lines with equal space between them.</li>
+                        <li>The <code>space-around</code> value displays the flex lines with space before, between, and after them.</li>
+                        <li>The <code>stretch</code> value stretches the flex lines to take up the remaining space (this is default).</li>
+                        <li>The <code>center</code> value displays display the flex lines in the middle of the container.</li>
+                        <li>The <code>flex-start</code> value displays the flex lines at the start of the container.</li>
+                        <li>The <code>flex-end</code> value displays the flex lines at the end of the container.</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  .flex-container {
+    display: flex;
+    height: 600px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li>
+            <h4>CSS Flex Items</h4>
+            The direct child elements of a flex container automatically becomes flexible (flex) items. <br>
+            <b class="text-primary">EX:</b>
+            <div class="table-responsive xmp"> 
+              <xmp>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        background-color: #f1f1f1;
+      }
+      .flex-container > div {
+        background-color: DodgerBlue;
+        color: white;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div> 
+      <div>4</div>
+    </div>
   </body>
 </html>
               </xmp>
+            </div> <br>
+            The flex item properties are:
+            <ul class="row">
+              <li class="col-md-4"><code>order</code></li>
+              <li class="col-md-4"><code>flex-grow</code></li>
+              <li class="col-md-4"><code>flex-shrink</code></li>
+              <li class="col-md-4"><code>flex-basis</code></li>
+              <li class="col-md-4"><code>flex</code></li>
+              <li class="col-md-4"><code>align-self</code></li>
+            </ul>
+            The following table lists all the CSS Flexbox Items properties:
+            <div class="table-responsive mt-3"> 
+              <table class="table table-bordered table-active">
+                <thead>
+                  <th style="width: 20%;">Property</th>
+                  <th style="width: 50%;">Description</th>
+                  <th style="width: 30%;">Example</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>align-self</td>
+                    <td>
+                      Specifies the alignment for a flex item (overrides the flex container's align-items property).
+                      <br> It has three values (center, flex-start, flex-end).
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  div{
+    align-self: flex-end
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>flex</td>
+                    <td>A shorthand property for the <code>flex-grow</code>, <code>flex-shrink</code>, and the <code>flex-basis</code> 
+                    properties.</td>
+                    <td>
+                      <pre>
+                        <code>
+  div{
+    flex: 0 0 200px
+  }
+                        </code>
+                      </pre>
+                      <p>Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>flex-basis</td>
+                    <td>Specifies the initial length of a flex item.</td>
+                    <td>
+                      <pre>
+                        <code>
+  div{
+    flex-basis: 200px
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>flex-grow</td>
+                    <td>Specifies how much a flex item will grow relative to the rest of the flex items inside the same container. <br>
+                      The value must be a number, default value is 0.
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  div{
+    flex-grow: 1
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>flex-shrink</td>
+                    <td>
+                      Specifies how much a flex item will shrink relative to the rest of the flex items inside the same container. <br>
+                      The value must be a number, default value is 1.
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  div{
+    flex-shrink: 0
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>order</td>
+                    <td>
+                      Specifies the order of the flex items inside the same container. <br>
+                      The order value must be a number, default value is 0.
+                    </td>
+                    <td>
+                      <pre>
+                        <code>
+  div{
+    order: 3
+  }
+                        </code>
+                      </pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </li>
         </ul>
       </div>
       <div class="section-title">
-        <h2>Clear Property</h2>
+        <h2>CSS Media Queries</h2>
         <ul>
-          <li>When we use the float property, and we want the next element below (not on right or left), we will have to use the clear property.</li>
-          <li>The clear property specifies what should happen with the element that is next to a floating element.</li>
+          <li>The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.</li>
+          <li>Examples: You could have one set of style rules for computer screens, one for printers, one for handheld devices, one for television-type devices, and so on.</li>
+          <li>Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.</li>
           <li>
-            The clear property can have one of the following values : 
+            Media queries can be used to check many things, such as : 
             <ul>
-              <li> <code>none</code> - The element is not pushed below 
-              left or right floated elements. This is default</li>
-              <li> <code>left</code> - The element is pushed below left 
-              floated elements</li>
-              <li> <code>right</code> - The element is pushed below 
-              right floated elements</li>
-              <li> <code>both</code> - The element is pushed below both 
-              left and right floated elements</li>
-              <li> <code>inherit</code> - The element inherits the clear value 
-              from its parent</li>
+              <li>width and height of the viewport</li>
+              <li>width and height of the device</li>
+              <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+              <li>resolution</li>
             </ul>
           </li>
-          <li>When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left.</li>
+          <li>Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).</li>
           <li>
-            <b class="text-primary">EX:</b>
-            <div class="table-responsive xmp">
-              <xmp>
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .div1 {
-        float: left;
-        padding: 10px;
-        border: 3px solid #73AD21;
-      }
-      .div2 {
-        padding: 10px;
-        border: 3px solid red;
-      }
-      .div3 {
-        float: left;
-        padding: 10px;  
-        border: 3px solid #73AD21;
-      }
-      .div4 {
-        padding: 10px;
-        border: 3px solid red;
-        clear: left;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Without clear</h2>
-    <div class="div1">div1</div>
-    <div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
-    <br><br>
-    <h2>With clear</h2>
-    <div class="div3">div3</div>
-    <div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
-  </body>
-</html>                
-              </xmp>
+            <h4>Media Query Syntax</h4>
+            <pre>
+              <code>
+  @media not|only mediatype and (expressions) {
+    CSS-Code;
+  }
+              </code>
+            </pre>
+            <ul>
+              <li>The result of the query is true if the specified media type matches the type of device the document is being displayed on and all expressions in the media query are true. When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.</li>
+              <li>Unless you use the not or only operators, the media type is optional and the all type will be implied.</li>
+            </ul>
+          </li>
+          <li>
+            <h4>CSS Media Types</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered table-active">
+                <thead>
+                  <tr>
+                    <th style="width:20%">Value</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr>
+                    <td>all</td>
+                    <td>Used for all media type devices</td>
+                  </tr>
+                  <tr>
+                    <td>print</td>
+                    <td>Used for printers</td>
+                  </tr>
+                    <tr>
+                    <td>screen</td>
+                    <td>Used for computer screens, tablets, smart-phones etc.</td>
+                    </tr>
+                  <tr>
+                    <td>speech</td>
+                    <td>Used for screenreaders that "reads" the page out loud</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </li>
+          <li>
+            <h4>Media Queries Examples</h4>
+            <pre>
+              <code>
+  @media screen and (min-width: 480px) {
+    #leftsidebar {width: 200px; float: left;}
+    #main {margin-left: 216px;}
+  }
+              </code>
+            </pre>
           </li>
         </ul>
       </div>
@@ -1356,446 +1799,6 @@ a[target="_blank"] {
                     <td>::selection</td>
                     <td>p::selection</td>
                     <td>Selects the portion of an element that is selected by a user</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <hr>
-    <section id="Queries" class="p-4 p-md-5">
-      <div class="section-title">
-        <h2>CSS Media Queries</h2>
-        <ul>
-          <li>The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.</li>
-          <li>Examples: You could have one set of style rules for computer screens, one for printers, one for handheld devices, one for television-type devices, and so on.</li>
-          <li>Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.</li>
-          <li>
-            Media queries can be used to check many things, such as : 
-            <ul>
-              <li>width and height of the viewport</li>
-              <li>width and height of the device</li>
-              <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
-              <li>resolution</li>
-            </ul>
-          </li>
-          <li>Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).</li>
-          <li>
-            <h4>Media Query Syntax</h4>
-            <pre>
-              <code>
-  @media not|only mediatype and (expressions) {
-    CSS-Code;
-  }
-              </code>
-            </pre>
-            <ul>
-              <li>The result of the query is true if the specified media type matches the type of device the document is being displayed on and all expressions in the media query are true. When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.</li>
-              <li>Unless you use the not or only operators, the media type is optional and the all type will be implied.</li>
-            </ul>
-          </li>
-          <li>
-            <h4>CSS Media Types</h4>
-            <div class="table-responsive">
-              <table class="table table-bordered table-active">
-                <thead>
-                  <tr>
-                    <th style="width:20%">Value</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody> 
-                  <tr>
-                    <td>all</td>
-                    <td>Used for all media type devices</td>
-                  </tr>
-                  <tr>
-                    <td>print</td>
-                    <td>Used for printers</td>
-                  </tr>
-                    <tr>
-                    <td>screen</td>
-                    <td>Used for computer screens, tablets, smart-phones etc.</td>
-                    </tr>
-                  <tr>
-                    <td>speech</td>
-                    <td>Used for screenreaders that "reads" the page out loud</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </li>
-          <li>
-            <h4>Media Queries Examples</h4>
-            <pre>
-              <code>
-  @media screen and (min-width: 480px) {
-    #leftsidebar {width: 200px; float: left;}
-    #main {margin-left: 216px;}
-  }
-              </code>
-            </pre>
-          </li>
-        </ul>
-      </div>
-      <div class="section-title">
-        <h2>CSS Flexbox</h2>
-        <ul>
-          <li>
-            <h4>Before the Flexbox Layout module, there were four layout modes:</h4>
-            <ul>
-              <li>Block, for sections in a webpage</li>
-              <li>Inline, for text</li>
-              <li>Table, for two-dimensional table data</li>
-              <li>Positioned, for explicit position of an element</li>
-            </ul>
-            The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
-          </li>
-          <li>
-            <b class="text-primary">EX :</b>
-            <div class="table-responsive xmp"> 
-              <xmp>
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: DodgerBlue;
-      }
-      .flex-container > div {
-        background-color: #f1f1f1;
-        width: 100px;
-        margin: 10px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 30px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>  
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>    
-    </div>
-    <p>Try resizing the browser window.</p>
-  </body>
-</html>                
-              </xmp>
-            </div>
-          </li>
-          <li class="mt-5">
-            <h4>CSS Flex Container</h4>
-            The flex container becomes flexible by setting the display property to flex <br>
-            <b class="text-primary">EX :</b>
-            <pre>
-              <code>
-  .flex-container {
-    display: flex;
-  }
-              </code>
-            </pre>
-            The flex container properties are: 
-            <ul class="row">
-              <li class="col-md-4"><code>flex-direction</code></li>
-              <li class="col-md-4"><code>flex-wrap</code></li>
-              <li class="col-md-4"><code>flex-flow</code></li>
-              <li class="col-md-4"><code>justify-content</code></li>
-              <li class="col-md-4"><code>align-items</code></li>
-              <li class="col-md-4"><code>align-content</code></li>
-            </ul>
-            <div class="table-responsive"> 
-              <table class="table table-bordered table-active">
-                <thead>
-                  <th style="width: 20%;">Property</th>
-                  <th style="width: 55%;">Description</th>
-                  <th style="width: 25%;">Example</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>flex-direction</td>
-                    <td>
-                      The <code>flex-direction</code> property defines in which direction the container wants to stack the flex items.
-                      <ul>
-                        <li>The <code>column</code> value stacks the flex items vertically (from top to bottom).</li>
-                        <li>The <code>column-reverse</code> value stacks the flex items vertically (but from bottom to top).</li>
-                        <li>The <code>row</code> value stacks the flex items horizontally (from left to right).</li>
-                        <li>The <code>row-reverse</code> value stacks the flex items horizontally (but from right to left).</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>flex-wrap</td>
-                    <td>
-                      The <code>flex-wrap</code> property specifies whether the flex items should wrap or not.
-                      <ul>
-                        <li>The <code>wrap</code> value specifies that the flex items will wrap if necessary.</li>
-                        <li>The <code>nowrap</code> value specifies that the flex items will not wrap (this is default).</li>
-                        <li>The <code>wrap-reverse</code> value specifies that the flexible items will wrap if necessary, in reverse order.</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>flex-flow</td>
-                    <td>The <code>flex-flow</code> property is a shorthand property for setting both the <code>flex-direction</code> and <code>flex-wrap</code> properties.</td>                    
-                    <td>
-                      <pre>
-                        <code>
-  .flex-container {
-    display: flex;
-    flex-flow: row wrap;
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>justify-content </td>
-                    <td>
-                      The <code>justify-content</code> property is used to align the flex items.
-                      <ul>
-                        <li>The <code>flex-start</code> value aligns the flex items at the beginning of the container (this is default).</li>
-                        <li>The <code>flex-end</code> value aligns the flex items at the end of the container.</li>
-                        <li>The <code>space-around </code> value displays the flex items with space before, between, and after the lines.</li>
-                        <li>The <code>space-between</code> value displays the flex items with space between the lines.</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>align-items</td>
-                    <td>
-                      The align-items property is used to align the flex items.
-                      <ul>
-                        <li>The <code>center</code> value aligns the flex items in the middle of the container.</li>
-                        <li>The <code>flex-start</code> value aligns the flex items at the top of the container.</li>
-                        <li>The <code>flex-end</code> value aligns the flex items at the bottom of the container.</li>
-                        <li>The <code>stretch</code> value stretches the flex items to fill the container (this is default).</li>
-                        <li>The <code>baseline</code> value aligns the flex items such as their baselines aligns.</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  .flex-container {
-    display: flex;
-    height: 200px;
-    align-items: center;
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>align-content</td>
-                    <td>
-                      The <code>align-content</code> property is used to align the flex lines.
-                      <ul>
-                        <li>The <code>space-between</code> value displays the flex lines with equal space between them.</li>
-                        <li>The <code>space-around</code> value displays the flex lines with space before, between, and after them.</li>
-                        <li>The <code>stretch</code> value stretches the flex lines to take up the remaining space (this is default).</li>
-                        <li>The <code>center</code> value displays display the flex lines in the middle of the container.</li>
-                        <li>The <code>flex-start</code> value displays the flex lines at the start of the container.</li>
-                        <li>The <code>flex-end</code> value displays the flex lines at the end of the container.</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  .flex-container {
-    display: flex;
-    height: 600px;
-    flex-wrap: wrap;
-    align-content: center;
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </li>
-          <li>
-            <h4>CSS Flex Items</h4>
-            The direct child elements of a flex container automatically becomes flexible (flex) items. <br>
-            <b class="text-primary">EX:</b>
-            <div class="table-responsive xmp"> 
-              <xmp>
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .flex-container {
-        display: flex;
-        background-color: #f1f1f1;
-      }
-      .flex-container > div {
-        background-color: DodgerBlue;
-        color: white;
-        width: 100px;
-        margin: 10px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 30px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="flex-container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div> 
-      <div>4</div>
-    </div>
-  </body>
-</html>
-              </xmp>
-            </div> <br>
-            The flex item properties are:
-            <ul class="row">
-              <li class="col-md-4"><code>order</code></li>
-              <li class="col-md-4"><code>flex-grow</code></li>
-              <li class="col-md-4"><code>flex-shrink</code></li>
-              <li class="col-md-4"><code>flex-basis</code></li>
-              <li class="col-md-4"><code>flex</code></li>
-              <li class="col-md-4"><code>align-self</code></li>
-            </ul>
-            The following table lists all the CSS Flexbox Items properties:
-            <div class="table-responsive mt-3"> 
-              <table class="table table-bordered table-active">
-                <thead>
-                  <th style="width: 20%;">Property</th>
-                  <th style="width: 50%;">Description</th>
-                  <th style="width: 30%;">Example</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>align-self</td>
-                    <td>
-                      Specifies the alignment for a flex item (overrides the flex container's align-items property).
-                      <br> It has three values (center, flex-start, flex-end).
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  div{
-    align-self: flex-end
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>flex</td>
-                    <td>A shorthand property for the <code>flex-grow</code>, <code>flex-shrink</code>, and the <code>flex-basis</code> 
-                    properties.</td>
-                    <td>
-                      <pre>
-                        <code>
-  div{
-    flex: 0 0 200px
-  }
-                        </code>
-                      </pre>
-                      <p>Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>flex-basis</td>
-                    <td>Specifies the initial length of a flex item.</td>
-                    <td>
-                      <pre>
-                        <code>
-  div{
-    flex-basis: 200px
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>flex-grow</td>
-                    <td>Specifies how much a flex item will grow relative to the rest of the flex items inside the same container. <br>
-                      The value must be a number, default value is 0.
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  div{
-    flex-grow: 1
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>flex-shrink</td>
-                    <td>
-                      Specifies how much a flex item will shrink relative to the rest of the flex items inside the same container. <br>
-                      The value must be a number, default value is 1.
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  div{
-    flex-shrink: 0
-  }
-                        </code>
-                      </pre>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>order</td>
-                    <td>
-                      Specifies the order of the flex items inside the same container. <br>
-                      The order value must be a number, default value is 0.
-                    </td>
-                    <td>
-                      <pre>
-                        <code>
-  div{
-    order: 3
-  }
-                        </code>
-                      </pre>
-                    </td>
                   </tr>
                 </tbody>
               </table>
