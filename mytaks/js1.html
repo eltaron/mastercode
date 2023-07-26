@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js</title>
+    <style>
+      main {
+        width: 85%;
+        margin: auto;
+        background-color: #0f044c;
+        text-align: center;
+        color: #eeeeee;
+        padding: 30px;
+        font-family: system-ui;
+        margin-top: 7%;
+      }
+      main p {
+        width: 90%;
+        height: 50px;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 14px;
+        border: 3px solid #eeeeee;
+        color: #eeeeee;
+        margin: 20px auto;
+      }
+      .row {
+        margin: 20px;
+      }
+      button {
+        border: none;
+        background-color: #eeeeee;
+        color: #0f044c;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 14px;
+        cursor: pointer;
+        width: 19%;
+        box-sizing: border-box;
+      }
+      .numbers button {
+        width: 46.5%;
+      }
+      .row2 button {
+        width: 48%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Hello</h1>
+      <p id="result"></p>
+      <section class="numbers">
+        <button id="FN">First Number <br /></button>
+        <button id="LN">Second Number <br /></button>
+      </section>
+      <section class="operators">
+        <div class="row">
+          <button id="add">+</button>
+          <button id="sub">-</button>
+          <button id="mul">*</button>
+          <button id="dev">/</button>
+          <button id="pow">**</button>
+        </div>
+        <div class="row">
+          <button id="sin">sin <br />(First Number)</button>
+          <button id="cos">cos <br />(First Number)</button>
+          <button id="log">log <br />(First Number)</button>
+          <button id="ceil">ceil <br />(First Number)</button>
+          <button id="floor">floor <br />(First Number)</button>
+        </div>
+        <div class="row row2">
+          <button id="circumference">
+            circumference of a circle <br />(r = First Number
+            <span id="redius"></span>)
+          </button>
+          <button id="area">
+            Circle area <br />(r = First Number <span id="redius2"></span>)
+          </button>
+        </div>
+      </section>
+    </main>
+    <script>
+      let t,
+        x = 0,
+        y = 0,
+        z = 00;
+      const pi = Math.PI;
+      result.textContent += z;
+      t = prompt("Enter your name");
+      title.textContent += t;
+      FN.addEventListener("click", function () {
+        x = Number(prompt("Enter First Numer"));
+        FN.textContent = `First Number ( ${x} )`;
+        redius.textContent = " = " + x;
+        redius2.textContent = " = " + x;
+      });
+      LN.addEventListener("click", function () {
+        y = Number(prompt("Enter Second Numer"));
+        LN.textContent = `Second Number ( ${y} )`;
+      });
+
+      add.addEventListener("click", function () {
+        z = x + y;
+        result.textContent = z;
+      });
+      sub.addEventListener("click", function () {
+        z = x - y;
+        result.textContent = z;
+      });
+      mul.addEventListener("click", function () {
+        z = x * y;
+        result.textContent = z;
+      });
+      dev.addEventListener("click", function () {
+        z = x / y;
+        result.textContent = z;
+      });
+      pow.addEventListener("click", function () {
+        z = x ** y;
+        result.textContent = z;
+      });
+
+      sin.addEventListener("click", function () {
+        z = Math.sin((x * pi) / 180);
+        result.textContent = z;
+      });
+      cos.addEventListener("click", function () {
+        z = Math.cos((x * pi) / 180);
+        result.textContent = z;
+      });
+      log.addEventListener("click", function () {
+        z = Math.log(x);
+        result.textContent = z;
+      });
+      ceil.addEventListener("click", function () {
+        z = Math.ceil(x);
+        result.textContent = z;
+      });
+      floor.addEventListener("click", function () {
+        z = Math.floor(x);
+        result.textContent = z;
+      });
+
+      circumference.addEventListener("click", function () {
+        z = 2 * pi * x;
+        result.textContent = z;
+      });
+      area.addEventListener("click", function () {
+        z = pi * x ** 2;
+        result.textContent = z;
+      });
+    </script>
+  </body>
+</html>
