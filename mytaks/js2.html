@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="username" />
+      <button type="button" id="submit">submit</button>
+    </form>
+    <ul id="mainul"></ul>
+    <script>
+      var a = [];
+      submit.addEventListener("click", function () {
+        a.push({ username: username.value });
+        username.value = "";
+        mainul.innerHTML = "";
+        for (var i in a) {
+          console.log(i);
+          mainul.innerHTML += `<li>${a[i]["username"]}</li>`;
+        }
+      });
+    </script>
+  </body>
+</html>

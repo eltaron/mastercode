@@ -19,8 +19,10 @@
 </head>
 <body>
   <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none" style="font-size: 37px;"><i class="bx bx-menu"></i></button>
-  <img src="../assets/img/logo.png" alt="" class="img-fluid d-md-block d-xl-none" style="width: 118px;padding: 8px 30px 0;">
+  <button type="button" class="mobile-nav-toggle d-xl-none">
+    <i class="bx bx-menu"></i>
+    <img src="../assets/img/logo.png" alt="" class="img-fluid d-md-block d-xl-none" style="width: 16%;float: left;"><!-- .nav-menu -->
+  </button>
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="d-flex flex-column">
@@ -54,18 +56,6 @@
       <div class="section-title">
         <h2>Data Types</h2>
         <ul>
-          <li>
-            JavaScript Types are Dynamic <br>
-            <p>means that the same variable can be used to hold different data types</p>
-            <b class="text-primary">EX: </b><br>
-            <pre>
-              <code>
-  let x;           // Now x is undefined
-  x = 5;           // Now x is a Number
-  x = "Ahmed";      // Now x is a String
-              </code>
-            </pre>
-          </li>
           <li>
             JavaScript Strings <br>
             <p>A string (or a text string) is a series of characters like "Ahmed mohamed".</p>
@@ -158,6 +148,18 @@
               </code>
             </pre>
           </li>
+          <li>
+            JavaScript Types are Dynamic <br>
+            <p>means that the same variable can be used to hold different data types</p>
+            <b class="text-primary">EX: </b><br>
+            <pre>
+              <code>
+  let x;           // Now x is undefined
+  x = 5;           // Now x is a Number
+  x = "Ahmed";      // Now x is a String
+              </code>
+            </pre>
+          </li>
         </ul>
       </div>
     </section>
@@ -181,13 +183,6 @@ text.length;    // Will return 26
           <li>
             <h4>Escape Character</h4>
             <p>The backslash (\) escape character turns special characters into string characters</p>
-            <b class="text-primary">EX: </b><br>
-            <pre>
-              <code>
-let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-text.length;    // Will return 26
-              </code>
-            </pre>
             <div class="table-responsive"> 
               <table class="table table-bordered table-active">
                 <thead>
@@ -281,34 +276,11 @@ result : The character \ is called backslash
               </table>
             </div> 
           </li>
-          <li>
-            <h4>Breaking Long Code Lines</h4>
-            <b class="text-primary">EX: </b> <br>
-              <pre>
-                <code>
-  document.getElementById("demo").innerHTML =
-  "Hello Dolly!";
-                </code>
-              </pre>
-          </li>
-          <li>
-            <h4>Strings Can be Objects</h4>
-            <b class="text-primary">EX: </b><br>
-            <pre>
-              <code>
-  let x = "Ahmed";
-  let y = new String("Ahmed");
-  // typeof x will return string
-  // typeof y will return object
-  // (x == y) is true because x and y have equal values not identical
-              </code>
-            </pre>
-          </li>
         </ul>
         <h2>String Methods and Properties</h2>
         <ul>
           <li>
-            <h4>String Length</h4>
+            String Length <br>
             <b class="text-primary">EX: </b>
             <pre>
               <code>
@@ -318,147 +290,142 @@ result : The character \ is called backslash
             </pre>
           </li>
           <li>
-            <h4>Extracting String Parts</h4>
-            <ul>
-              <li>
-                The slice(start, end) Method <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  let str = "Apple, Banana, Kiwi";
-  str.slice(7, 13)     // Returns Banana
-  let str = "Apple, Banana, Kiwi";
-  str.slice(-12, -6)    // Returns Banana
-                  </code>
-                </pre>
-              </li>
-              <li>
-                The substring(start, end or length of word) Method <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  let str = "Apple, Banana, Kiwi";
-  substring(7, 13)    // Returns Banana
-  //cannot accept negative indexes.<br>
-  If the first parameter is negative,<br>
-  the position counts from the end of the string.
-                  </code>
-                </pre>
-              </li>
-              <li>
-                the replace() Method <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  let text = "Please visit Microsoft!";
-  let newText = text.replace("Microsoft", "W3Schools");
-  //replaces only the first match.
-  //this method is case sensitive.
-  let newText = text.replace(/MICROSOFT/i, "W3Schools");
-  //use a regular expression with an /i flag (insensitive)
-                  </code>
-                </pre>
-              </li>
-              <li>
-                toUpperCase() Method <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  let text1 = "Hello World!";       // String
-  let text2 = text1.toUpperCase();  // text2 is text1 converted to upper
-                  </code>
-                </pre>
-              </li>
-              <li>
-                toLowerCase() Method <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  let text1 = "Hello World!";       // String
-  let text2 = text1.toLowerCase();  // text2 is text1 converted to lower
-                  </code>
-                </pre>
-              </li>
-              <li>
-                The concat() Method <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  let text1 = "Hello";
-  let text2 = "World";
-  let text3 = text1.concat(" ", text2);
-                  </code>
-                </pre>
-              </li>
-              <li>
-                String.trim() <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  let text = "       Hello World!        ";
-  text.trim()    // Returns "Hello World!";
-  //removes whitespace from both sides of a string.
-                  </code>
-                </pre>
-              </li>
-              <li>
-                padStart() and padEnd() <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  //support padding at the beginning and at the end of a string                      
-  let text = "5";
-  text.padStart(4,0)    // Returns 0005
-  let text = "5";
-  text.padEnd(4,0)     // Returns 5000                        
-                  </code>
-                </pre>
-              </li>
-              <li>
-                charAt(position) <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  // returns the character at a specified index (position) in a string
-  let text = "HELLO WORLD";
-  text.charAt(0)           // Returns H                  
-                  </code>
-                </pre>
-              </li>
-              <li>
-                The charCodeAt() Method <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  // returns the unicode of the character at a specified index in a string
-  let text = "HELLO WORLD";
-  text.charCodeAt(0)       // Returns 72                  
-                  </code>
-                </pre>
-              </li>
-              <li>
-                Property Access <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  // allows property access [ ] on strings
-  let text = "HELLO WORLD";
-  text[0]                   // returns H                  
-                  </code>
-                </pre>
-              </li>
-              <li>
-                Converting a String to an Array "split()" <br>
-                <b class="text-primary">EX: </b>
-                <pre>
-                  <code>
-  text.split(",")          // Split on commas
-  text.split(" ")          // Split on spaces
-  text.split("|")          // Split on pipe                
-                  </code>
-                </pre>
-              </li>
-            </ul>
+            Property Access <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+// allows property access [ ] on strings
+let text = "HELLO WORLD";
+text[0]                   // returns H                  
+              </code>
+            </pre>
+          </li>
+          <li>
+            The slice(start, end) Method <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+let str = "Apple, Banana, Kiwi";
+str.slice(7, 13)     // Returns Banana
+let str = "Apple, Banana, Kiwi";
+str.slice(-12, -6)    // Returns Banana
+              </code>
+            </pre>
+          </li>
+          <li>
+            The substring(start, end or length of word) Method <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+let str = "Apple, Banana, Kiwi";
+substring(7, 13)    // Returns Banana
+//cannot accept negative indexes.<br>
+If the first parameter is negative,<br>
+the position counts from the end of the string.
+              </code>
+            </pre>
+          </li>
+          <li>
+            the replace() Method <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "W3Schools");
+//replaces only the first match.
+//this method is case sensitive.
+let newText = text.replace(/MICROSOFT/i, "W3Schools");
+//use a regular expression with an /i flag (insensitive)
+              </code>
+            </pre>
+          </li>
+          <li>
+            toUpperCase() Method <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+let text1 = "Hello World!";       // String
+let text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+              </code>
+            </pre>
+          </li>
+          <li>
+            toLowerCase() Method <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+let text1 = "Hello World!";       // String
+let text2 = text1.toLowerCase();  // text2 is text1 converted to lower
+              </code>
+            </pre>
+          </li>
+          <li>
+            The concat() Method <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+              </code>
+            </pre>
+          </li>
+          <li>
+            String.trim() <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+let text = "       Hello World!        ";
+text.trim()    // Returns "Hello World!";
+//removes whitespace from both sides of a string.
+              </code>
+            </pre>
+          </li>
+          <li>
+            padStart() and padEnd() <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+//support padding at the beginning and at the end of a string                      
+let text = "5";
+text.padStart(4,0)    // Returns 0005
+let text = "5";
+text.padEnd(4,0)     // Returns 5000                        
+              </code>
+            </pre>
+          </li>
+          <li>
+            charAt(position) <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+// returns the character at a specified index (position) in a string
+let text = "HELLO WORLD";
+text.charAt(0)           // Returns H                  
+              </code>
+            </pre>
+          </li>
+          <li>
+            The charCodeAt() Method <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+// returns the unicode of the character at a specified index in a string
+let text = "HELLO WORLD";
+text.charCodeAt(0)       // Returns 72                  
+              </code>
+            </pre>
+          </li>
+          <li>
+            Converting a String to an Array "split()" <br>
+            <b class="text-primary">EX: </b>
+            <pre>
+              <code>
+text.split(",")          // Split on commas
+text.split(" ")          // Split on spaces
+text.split("|")          // Split on pipe                
+              </code>
+            </pre>
           </li>
         </ul>
         <h2>JavaScript String Search</h2>
