@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body oncontextmenu="return false">
+    <div class="row">
+      <div class="col-3">
+        <h2>Instructions :</h2>
+        <ul>
+          <li>
+            First name must be string and less than or equal 10 characters.
+          </li>
+          <li>
+            Last name must be string and less than or equal 10 characters.
+          </li>
+          <li>
+            Password must be numbers and less than or equal 20 characters.
+          </li>
+          <li>You must add valid email.</li>
+          <li>
+            About you must be string and greater than 30 characters and less
+            than 200 characters.
+          </li>
+        </ul>
+        <hr />
+        <h2 id="errorTitle">Errors :</h2>
+        <ul id="errorsUl"></ul>
+      </div>
+      <div class="col-9">
+        <form id="myForm">
+          <h3>First Name :</h3>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="Enter your First name"
+          />
+          <p class="error"></p>
+          <h3>Last Name :</h3>
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Enter your Last name"
+          />
+          <p class="error"></p>
+          <h3>Password :</h3>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+          <p class="error"></p>
+          <h3>Email :</h3>
+          <input type="email" name="email" placeholder="Enter your email" />
+          <p class="error"></p>
+          <h3>About you :</h3>
+          <textarea
+            name="about"
+            id=""
+            cols="30"
+            rows="6"
+            placeholder="About you"
+          ></textarea>
+          <p class="error"></p>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      myForm.addEventListener("submit", function () {
+        event.preventDefault();
+        let firstname = myForm.firstname.value;
+        let lastname = myForm.lastname.value;
+        let password = myForm.password.value;
+        let email = myForm.email.value;
+        let about = myForm.about.value;
+        const errors = [];
+        if (firstname.length <= 10 && firstname.length > 1) {
+          myForm.firstname.style.borderColor = "green";
+          firstname = firstname.trim().toLowerCase();
+        } else {
+          myForm.firstname.style.borderColor = "red";
+          document.getElementsByClassName("error")[0].textContent =
+            "First name must be string and less than or equal 10 characters.";
+          errors.push(
+            "First name must be string and less than or equal 10 characters."
+          );
+        }
+
+        if (lastname.length <= 10 && lastname.length > 1) {
+          myForm.lastname.style.borderColor = "green";
+          lastname = lastname.trim().toLowerCase();
+        } else {
+          myForm.lastname.style.borderColor = "red";
+          document.getElementsByClassName("error")[1].textContent =
+            "Last name must be string and less than or equal 10 characters.";
+          errors.push(
+            "Last name must be string and less than or equal 10 characters."
+          );
+        }
+
+        if (
+          password.length <= 20 &&
+          password.length > 1 &&
+          !Number.isNaN(Number(password))
+        ) {
+          myForm.password.style.borderColor = "green";
+          password = Number(password);
+        } else {
+          myForm.password.style.borderColor = "red";
+          document.getElementsByClassName("error")[2].textContent =
+            "Password must be numbers and less than or equal 20 characters.";
+          errors.push(
+            "Password must be numbers and less than or equal 20 characters."
+          );
+        }
+
+        if (email.length >= 8 && email.includes("@gmail.")) {
+          myForm.email.style.borderColor = "green";
+          email = email.split("@");
+          email = email[0].trim().toLowerCase();
+        } else {
+          myForm.email.style.borderColor = "red";
+          document.getElementsByClassName("error")[3].textContent =
+            "You must add valid email.";
+          errors.push("You must add valid email.");
+        }
+
+        if (about.length >= 30 && about.length <= 200) {
+          myForm.about.style.borderColor = "green";
+          about = about.trim().toLowerCase();
+        } else {
+          myForm.about.style.borderColor = "red";
+          document.getElementsByClassName("error")[4].textContent =
+            "About you must be string and greater than 30 characters and less than 200 characters.";
+          errors.push(
+            "About you must be string and greater than 30 characters and less than 200 characters."
+          );
+        }
+
+        if (errors.length > 0) {
+          let data = "";
+          for (let i = 0; i < errors.length; i++) {
+            data += `<li>${errors[i]}</li>`;
+          }
+          errorTitle.style.display = "block";
+          errorsUl.innerHTML = data;
+        } else {
+          for (
+            let i = 0;
+            i < document.getElementsByClassName("error").length;
+            i++
+          ) {
+            document.getElementsByClassName("error")[i].textContent = "";
+          }
+          errorTitle.style.display = "none";
+          errorsUl.innerHTML = "";
+          alert("every thing is good");
+        }
+      });
+    </script>
+  </body>
+</html>
