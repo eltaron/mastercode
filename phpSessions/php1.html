@@ -19,8 +19,10 @@
 </head>
 <body>
   <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none" style="font-size: 37px;"><i class="bx bx-menu"></i></button>
-  <img src="../assets/img/logo.png" alt="" class="img-fluid d-md-block d-xl-none" style="width: 118px;padding: 8px 30px 0;">
+  <button type="button" class="mobile-nav-toggle d-xl-none">
+    <i class="bx bx-menu"></i>
+    <img src="../assets/img/logo.png" alt="" class="img-fluid d-md-block d-xl-none" style="width: 16%;float: left;"><!-- .nav-menu -->
+  </button>
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="d-flex flex-column">
@@ -37,7 +39,7 @@
       </div>
       <nav class="nav-menu">
         <ul>
-          <li><a href="../css.html"><i class="bx bx-home"></i> <span>All Sessions</span></a></li>
+          <li><a href="../index.html"><i class="bx bx-home"></i> <span>All Sessions</span></a></li>
           <li class="active"><a href="#Syntax"><i class="bx bx-checkbox-checked"></i> <span>PHP Syntax</span></a></li>
           <li><a href="#Variables"><i class="bx bx-checkbox-checked"></i> <span>PHP Variables</span></a></li>
           <li><a href="#Constants"><i class="bx bx-checkbox-checked"></i> <span>PHP Constants</span></a></li>
@@ -180,81 +182,7 @@
           </li>
         </ul>
       </div>
-      <div class="section-title">
-        <h2>PHP Variables Scope</h2>
-        <ul>
-          <li>In PHP, variables can be declared anywhere in the script.</li>
-          <li>The scope of a variable is the part of the script where the variable can be referenced/used.</li>
-          <li>
-            PHP has three different variable scopes:
-            <ul>
-              <li>local</li>
-              <li>global</li>
-              <li>static</li>
-            </ul>
-          </li>
-          <li>
-            A variable declared <b>outside</b> a function has a <b class="text-primary">GLOBAL SCOPE</b> and can only be accessed outside a function:
-            <pre>
-              <code>
-  $x = 5; // global scope
-  function myTest() {
-    // using x inside this function will generate an error
-    echo "&lt;p>Variable x inside function is: $x&lt;/p&gt;";
-  }
-  myTest();
-  echo "&lt;p&gt;Variable x outside function is: $x&lt;/p&gt;";
-              </code>
-            </pre>
-          </li>
-          <li>
-            A variable declared <b>within</b> a function has a <b class="text-primary">LOCAL SCOPE</b> and can only be accessed within that function:
-            <pre>
-              <code>
-  function myTest() {
-    $x = 5; // local scope
-    echo "&lt;p&gt;Variable x inside function is: $x&lt;/p&gt;";
-  }
-  myTest();
-  // using x outside the function will generate an error
-  echo "&lt;p&gt;Variable x outside function is: $x&lt;/p&gt;";
-              </code>
-            </pre>
-          </li>
-          <li>
-            Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job. <br>
-            To do this, use the <code>static</code> keyword when you first declare the variable:
-            <pre>
-              <code>
-  function myTest() {
-    static $x = 0;
-    echo $x;
-    $x++;
-  }
-  myTest();
-  myTest();
-  myTest();
-              </code>
-            </pre>
-          </li>
-          <li>
-            The <code>global</code> keyword is used to access a global variable from within a function. <br>
-            To do this, use the <code>global</code> keyword before the variables (inside the function):
-            <pre>
-              <code>
-  $x = 5;
-  $y = 10;
-  function myTest() {
-    global $x, $y;
-    $y = $x + $y;
-  }
-  myTest();
-  echo $y; // outputs 15
-              </code>
-            </pre>
-          </li>
-        </ul>
-      </div>
+      
     </section>
     <hr>
     <section id="Constants" class="p-4 p-md-5">
@@ -268,7 +196,6 @@
             <ul>
               <li><i>name</i>: Specifies the name of the constant</li>
               <li><i>value</i>: Specifies the value of the constant</li>
-              <li><i>case-insensitive</i>: Specifies whether the constant name should be case-insensitive. Default is false</li>
             </ul>
           </li>
           <li>
@@ -277,15 +204,6 @@
               <code>
   define("GREETING", "Welcome to W3Schools.com!");
   echo GREETING;
-              </code>
-            </pre>
-          </li>
-          <li>
-            Create a constant with a case-insensitive name
-            <pre>
-              <code>
-  define("GREETING", "Welcome to W3Schools.com!", true);
-  echo greeting;
               </code>
             </pre>
           </li>
@@ -636,7 +554,7 @@
                 </td>
                 </tr>
                 <tr>
-                  <td>rand()</td>
+                  <td>rand() <br> rand(min,max)</td>
                   <td>The rand() function generates a random number:</td>
                   <td>
                     <pre>                   
