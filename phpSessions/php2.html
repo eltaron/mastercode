@@ -36,19 +36,15 @@
   </head>
   <body>
     <!-- ======= Mobile nav toggle button ======= -->
-    <button
-      type="button"
-      class="mobile-nav-toggle d-xl-none"
-      style="font-size: 37px"
-    >
+    <button type="button" class="mobile-nav-toggle d-xl-none">
       <i class="bx bx-menu"></i>
+      <img
+        src="../assets/img/logo.png"
+        alt=""
+        class="img-fluid d-md-block d-xl-none"
+        style="width: 16%; float: left"
+      /><!-- .nav-menu -->
     </button>
-    <img
-      src="../assets/img/logo.png"
-      alt=""
-      class="img-fluid d-md-block d-xl-none"
-      style="width: 118px; padding: 8px 30px 0"
-    />
     <!-- ======= Header ======= -->
     <header id="header">
       <div class="d-flex flex-column">
@@ -681,7 +677,11 @@ print_r($c);
                 </tr>
                 <tr>
                   <td>array_count_values()</td>
-                  <td>counts all the values of an array.</td>
+                  <td>
+                    Returns an associative array, where the keys are the
+                    original array's values, and the values are the number of
+                    occurrences
+                  </td>
                   <td>
                     <pre>
                     <code>
